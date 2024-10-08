@@ -1,4 +1,4 @@
-const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789./-!@#$%^&*";
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 let interval = null;
 
