@@ -1,4 +1,3 @@
-
 body {
     display: grid;
     place-items: center;
@@ -19,6 +18,10 @@ body {
   h1:hover {
     background-color: white;
     color: black;
+  }
+
+ #demo {
+    color: white;
   }
   
   
