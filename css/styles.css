@@ -42,9 +42,7 @@ html, body {
 #loading-text {
     margin-top: 20px;
 }
-#loading-ascii-art {
-    text-align: center;
-}
+
 #command-interface {
     vertical-align: top
 }
@@ -141,17 +139,6 @@ html, body {
         opacity: 1;
     }
 }
-@media screen and (max-width: 800px) {
-    .ascii, #loading-ascii-art {
-        font-size: 8px;
-        
-    }
-}
-/* Make ascii-art mobile responsive */
-@media screen and (max-width: 600px) {
-    .ascii, .ascii-art, #loading-ascii-art {
-        font-size: 5px;
-        
-    }
-}
+
+
 
