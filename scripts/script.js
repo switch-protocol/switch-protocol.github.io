@@ -1,3 +1,5 @@
+document.getElementById("demo").innerHTML = 5 + 6;
+
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 let interval = null;
