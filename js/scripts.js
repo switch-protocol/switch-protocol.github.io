@@ -1,5 +1,3 @@
-document.getElementById("demo").innerHTML = 5 + 6;
-
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 let interval = null;
@@ -27,4 +25,4 @@ document.querySelector("h1").onmouseover = event => {
     
     iteration += 1 / 3;
   }, 30);
-}
+};
