@@ -14,6 +14,13 @@ html, body {
     height: 100vh;  
 
 }
+
+#progress-container {
+    margin: 20px;
+    width: 400px;
+    height: 8px;
+}
+
 #loading {
     width: 100%;
     display: flex;
