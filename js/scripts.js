@@ -1,3 +1,8 @@
+window.onload = function() {
+  alert("Welcome to the page!");
+  // Any additional code to execute after the alert can go here
+};
+
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 let interval = null;
