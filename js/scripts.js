@@ -1,4 +1,4 @@
-const letters = "ABCDEF";
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*[]/:_-";
 const h1 = document.querySelector("h1");
 
 let interval = null;
