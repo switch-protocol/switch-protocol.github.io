@@ -16,7 +16,7 @@ window.onload = function() {
           return h1.target.dataset.value[index];
         }
       
-        return letters[Math.floor(Math.random() * 26)]
+        return letters[Math.floor(Math.random() * 50)]
       })
       .join("");
     
@@ -42,7 +42,7 @@ document.querySelector("h1").onmouseover = event => {
           return event.target.dataset.value[index];
         }
       
-        return letters[Math.floor(Math.random() * 26)]
+        return letters[Math.floor(Math.random() * 50)]
       })
       .join("");
     
