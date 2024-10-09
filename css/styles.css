@@ -20,7 +20,7 @@ body {
     padding: 0rem clamp(1rem, 2vw, 3rem);
     border-radius: clamp(0.4rem, 0.75vw, 1rem);
     margin: 0;             /* Remove any default margins */
-    padding: 0.5;            /* Remove any default padding */
+    padding: 0.25;            /* Remove any default padding */
     line-height: 1.1;      /* Adjust line-height to reduce vertical space */
   }
   
@@ -68,12 +68,15 @@ body {
 @media (max-width: 768px) {
     h1 {
         font-size: 28px;  /* Adjust heading size for mobile */
+        width: 100%;
       }
       h2 {
-          font-size: 14px;  /* Adjust heading size for mobile */
+          font-size: 14px;
+          width: 100%;  /* Adjust heading size for mobile */
         }
       h3 {
-      font-size: 8px;  /* Adjust heading size for mobile */
+      font-size: 8px;
+      width: 100%;  /* Adjust heading size for mobile */
       }
   }
   
@@ -81,13 +84,16 @@ body {
   @media (max-width: 480px) {
   
     h1 {
-      font-size: 28px;  /* Adjust heading size for mobile */
+      font-size: 28px;
+      width: 100%;  /* Adjust heading size for mobile */
     }
     h2 {
-        font-size: 14px;  /* Adjust heading size for mobile */
+        font-size: 14px;
+        width: 100%;  /* Adjust heading size for mobile */
       }
     h3 {
-    font-size: 8px;  /* Adjust heading size for mobile */
+    font-size: 8px;
+    width: 100%;  /* Adjust heading size for mobile */
     }
   }
   
