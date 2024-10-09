@@ -9,7 +9,7 @@ window.onload = function() {
   clearInterval(interval);
   
   interval = setInterval(() => {
-    h1.innerText = h1.innerText
+    h1.innerText = h1.dataset.value
       .split("")
       .map((letter, index) => {
         if(index < iteration) {
