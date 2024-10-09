@@ -1,59 +1,70 @@
-
-
-h1, h2, h3 {
+body {
     font-family: 'Space Mono', monospace;
+    display: grid;
+    place-items: center;
+    height: 100vh;
     background-color: black;
     color: white;
+    margin: 0rem;
+    overflow: hidden;
+  }
+  
+  h1 {
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(3rem, 10vw, 10rem);
+    color: white;
+    background-color: black;
     padding: 0rem clamp(1rem, 2vw, 3rem);
     border-radius: clamp(0.4rem, 0.75vw, 1rem);
-    border: 1px solid red; /* Temporary border to check if text is being rendered */
-    visibility: visible !important;
-    display: block !important;
-}
+  }
 
-h1 {
-    font-size: clamp(3rem, 10vw, 10rem);
-}
+  h2 {
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(1rem, 5vw, 5rem);
+    color: white;
+    background-color: black;
+    padding: 0rem clamp(1rem, 2vw, 3rem);
+    border-radius: clamp(0.4rem, 0.75vw, 1rem);
+  }
 
-h2 {
-    font-size: clamp(1.5rem, 7vw, 7rem);  /* Increased base size for better visibility */
-}
+  h3 {
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(0.25rem, 2.5vw, 2.5rem);
+    color: white;
+    background-color: black;
+    padding: 0rem clamp(0.5rem, 2.5vw, 2.5rem);
+    border-radius: clamp(0.4rem, 0.75vw, 1rem);
+  }
+  
 
-h3 {
-    font-size: clamp(1rem, 5vw, 5rem);  /* Increased base size for better visibility */
-}
-
-.match {
+  .match {
     background-color: white;
     color: rgb(255, 80, 80);
-}
-
-h1:hover {
+ 
+  }
+  
+  h1:hover {
     background-color: white;
     color: black;
-}
+  }
 
-/* Media queries for responsive design */
+  /* For tablets (width up to 768px) */
 @media (max-width: 768px) {
+    body {
+      font-size: 16px;  /* Adjust text size */
+    }
+  }
+  
+  /* For mobile devices (width up to 480px) */
+  @media (max-width: 480px) {
+    body {
+      font-size: 14px;  /* Adjust text size further */
+    }
+  
     h1 {
-        font-size: 48px;
+      font-size: 24px;  /* Adjust heading size for mobile */
     }
-    h2 {
-        font-size: 36px;
-    }
-    h3 {
-        font-size: 24px;
-    }
-}
+  }
+  
+  
 
-@media (max-width: 480px) {
-    h1 {
-        font-size: 36px;
-    }
-    h2 {
-        font-size: 24px;
-    }
-    h3 {
-        font-size: 18px;
-    }
-}
