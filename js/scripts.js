@@ -10,7 +10,7 @@ window.onload = function() {
   clearInterval(interval);
   
   // Delay the start of the animation by 2 seconds (2000 milliseconds)
-  setTimeout(() => {
+  
 
     // Start the interval for the animation
     interval = setInterval(() => {
@@ -32,8 +32,8 @@ window.onload = function() {
       
       iteration += 1 / 3;
     }, 30);
-  }, 2000);
-};
+  };
+
 
 
 h1.onmouseover = event => {  
