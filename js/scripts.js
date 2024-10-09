@@ -47,8 +47,8 @@ function animateText(target, duration = 1500, intervalTime = 35) {
 
 // Start animation on page load
 window.onload = function () {
-  animateText(h2,1500,35);  // Initial load animation
-
+  animateText(h1,1500,35);  // Initial load animation
+  animateText(h2,1500,35);
   /* Animate all h2 elements
   h2Headings.forEach((h2, index) => {
     setTimeout(() => animateText(h2, 0, 35), index * 200);  // Delay between each h2 animation
