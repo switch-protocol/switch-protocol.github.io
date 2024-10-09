@@ -26,22 +26,21 @@ body {
   }
 
   h2 {
+    color:rgb(148, 212, 255);
     font-size: clamp(1rem, 5vw, 5rem);
     text-align: left;
     position: left;
     margin-bottom: 0.5rem;
-    color:rgb(0, 132, 255);
   }
 
   h3 {
+    color: rgb(158, 255, 146);
     font-size: clamp(0.25rem, 2.5vw, 2.5rem);
     text-align: left;
     position: left;
     margin-bottom: 0.25rem;
-    color:  rgb(255, 80, 80);
   }
   
-
   .match {
     background-color: white;
     color: rgb(255, 80, 80);
