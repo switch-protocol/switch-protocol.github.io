@@ -2,11 +2,11 @@ const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*[]/:_-";
 const h1 = document.querySelector("h1");
 
 let interval = null;
-let lastIteration = -1; // To track when a new letter is revealed
 
 // Function to animate the text
 function animateText(target, duration = 2000, intervalTime = 40) {
-  let iteration = 0; // Reset iteration
+  let iteration = 0;  // Start from the first letter
+  let lastIndex = -1; // Track the last letter revealed with the red class
 
   clearInterval(interval);  // Clear any existing intervals
   const startTime = Date.now();
@@ -14,42 +14,43 @@ function animateText(target, duration = 2000, intervalTime = 40) {
   interval = setInterval(() => {
     const elapsedTime = Date.now() - startTime;
 
+    // Build the text by iterating through the letters
     target.innerHTML = target.dataset.value
       .split("")
       .map((letter, index) => {
         if (index < iteration) {
-          // Apply red class only to the newly revealed letter
-          if (index === Math.floor(iteration - 1) && index > lastIteration) {
+          // Apply red class to the newly revealed letter for one iteration
+          if (index === lastIndex + 1) {
+            lastIndex = index;  // Update the lastIndex to mark this letter
             return `<span class="match">${target.dataset.value[index]}</span>`;
           }
-          // Apply default (no class or normal) after the first reveal
+          // Normal class (no red) after the first reveal
           return `<span>${target.dataset.value[index]}</span>`;
         }
-        // Display random letters for unrevealed positions
+        // Show random letters for unrevealed positions
         return `<span>${letters[Math.floor(Math.random() * letters.length)]}</span>`;
       })
       .join("");
 
+    // Stop the animation when all letters are revealed
     if (iteration >= target.dataset.value.length) {
-      clearInterval(interval);  // Stop animation when all letters are revealed
+      clearInterval(interval);
     }
 
-    // Update iteration when the duration has passed
+    // Update iteration as time progresses
     if (elapsedTime >= duration) {
       iteration += 1 / 3;
-      lastIteration = Math.floor(iteration - 1); // Track the last full letter revealed
     }
   }, intervalTime);
 }
 
-// Initial load animation
+// Start animation on page load
 window.onload = function () {
-  animateText(h1); // Start animation on page load
+  animateText(h1);  // Initial load animation
 };
 
-// Hover effect
-h1.onmouseover = event => {
-  clearInterval(interval); // Stop the current interval when hover starts
-  lastIteration = -1; // Reset lastIteration to -1
-  animateText(event.target, 0, 30); // Restart animation from the beginning
-};
+// Mouseover event to reset and restart animation
+h1.addEventListener('mouseover', () => {
+  clearInterval(interval);  // Stop any ongoing animation
+  animateText(h1, 0, 30);   // Restart the animation with faster timing
+});
