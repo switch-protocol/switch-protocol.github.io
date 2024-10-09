@@ -39,7 +39,7 @@ function animateText(target, duration = 2000, intervalTime = 40) {
 
     // Update iteration as time progresses
     if (elapsedTime >= duration) {
-      iteration += 1 / 5;
+      iteration += 1 / 10;
     }
   }, intervalTime);
 }
