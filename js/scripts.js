@@ -6,26 +6,33 @@ let interval = null;
 window.onload = function() {
   let iteration = 0;
   
+  // Clear any existing interval
   clearInterval(interval);
   
-  interval = setInterval(() => {
-    h1.innerText = h1.dataset.value
-      .split("")
-      .map((letter, index) => {
-        if(index < iteration) {
-          return h1.dataset.value[index];
-        }
+  // Delay the start of the animation by 2 seconds (2000 milliseconds)
+  setTimeout(() => {
+
+    // Start the interval for the animation
+    interval = setInterval(() => {
+      h1.innerText = h1.dataset.value
+        .split("")
+        .map((letter, index) => {
+          if(index < iteration) {
+            // On each interval, for each iteration, if the current letter is not the target letter, change.
+            return h1.dataset.value[index];
+          }
+          // Otherwise, get a number between 0.0 - 1.0 and multiply 
+          return letters[Math.floor(Math.random() * letters.length)]
+        })
+        .join("");
       
-        return letters[Math.floor(Math.random() * 50)]
-      })
-      .join("");
-    
-    if(iteration >= h1.dataset.value.length){ 
-      clearInterval(interval);
-    }
-    
-    iteration += 1 / 3;
-  }, 30);
+      if(iteration >= h1.dataset.value.length){ 
+        clearInterval(interval);
+      }
+      
+      iteration += 1 / 3;
+    }, 30);
+  }, 2000);
 };
 
 
@@ -42,7 +49,7 @@ h1.onmouseover = event => {
           return event.target.dataset.value[index];
         }
       
-        return letters[Math.floor(Math.random() * 50)]
+        return letters[Math.floor(Math.random() * letters.length)]
       })
       .join("");
     
