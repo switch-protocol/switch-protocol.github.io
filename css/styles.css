@@ -6,6 +6,7 @@
     background-color: black;
     padding: 0rem clamp(1rem, 2vw, 3rem);
     border-radius: clamp(0.4rem, 0.75vw, 1rem);
+    position: center;
   }
 
   h2 {
@@ -15,6 +16,7 @@
     background-color: black;
     padding: 0rem clamp(1rem, 2vw, 3rem);
     border-radius: clamp(0.4rem, 0.75vw, 1rem);
+    position: left;
   }
 
   h3 {
@@ -24,6 +26,7 @@
     background-color: black;
     padding: 0rem clamp(0.5rem, 2.5vw, 2.5rem);
     border-radius: clamp(0.4rem, 0.75vw, 1rem);
+    postition: left;
   }
   
 
