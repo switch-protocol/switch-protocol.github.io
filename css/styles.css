@@ -17,6 +17,25 @@ body {
     border-radius: clamp(0.4rem, 0.75vw, 1rem);
   }
 
+  h2 {
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(2rem, 10vw, 10rem);
+    color: white;
+    background-color: black;
+    padding: 0rem clamp(1rem, 2vw, 3rem);
+    border-radius: clamp(0.4rem, 0.75vw, 1rem);
+  }
+
+  h3 {
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(0.5rem, 5vw, 5rem);
+    color: white;
+    background-color: black;
+    padding: 0rem clamp(0.5rem, 2.5vw, 2.5rem);
+    border-radius: clamp(0.4rem, 0.75vw, 1rem);
+  }
+  
+
   .match {
     background-color: white;
     color: rgb(255, 80, 80);
