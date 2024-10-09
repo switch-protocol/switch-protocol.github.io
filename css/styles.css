@@ -20,7 +20,7 @@ body {
     padding: 0rem clamp(1rem, 2vw, 3rem);
     border-radius: clamp(0.4rem, 0.75vw, 1rem);
     margin: 0;             /* Remove any default margins */
-    padding: 0.25;            /* Remove any default padding */
+    padding: 0.05;            /* Remove any default padding */
     line-height: 1.1;      /* Adjust line-height to reduce vertical space */
   }
   
