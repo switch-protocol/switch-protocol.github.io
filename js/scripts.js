@@ -46,11 +46,11 @@ function animateText(target, duration = 2000, intervalTime = 40) {
 
 // Start animation on page load
 window.onload = function () {
-  animateText(h1,2000,50);  // Initial load animation
+  animateText(h1,2000,30);  // Initial load animation
 };
 
 // Mouseover event to reset and restart animation
 h1.addEventListener('mouseover', () => {
-  clearInterval(interval,2000,50);  // Stop any ongoing animation
-  animateText(h1, 0, 50);   // Restart the animation with faster timing
+  clearInterval(interval);  // Stop any ongoing animation
+  animateText(h1, 0, 30);   // Restart the animation with faster timing
 });
