@@ -1,15 +1,13 @@
 body {
     font-family: 'Space Mono', monospace;
-    /* Remove grid layout */
-    /* display: grid; */
-    /* place-items: center; */
-    height: auto; /* Let the page extend beyond 100vh */
-    overflow: visible; /* Allow content to overflow if necessary */
+    display: grid;
+    place-items: center;
+    height: 100vh;
     background-color: black;
     color: white;
-    margin: 0;
-    padding: 1rem; /* Add padding for spacing */
-}
+    margin: 0rem;
+    overflow: hidden;
+  }
   
   h1 {
     font-family: 'Space Mono', monospace;
@@ -19,6 +17,25 @@ body {
     padding: 0rem clamp(1rem, 2vw, 3rem);
     border-radius: clamp(0.4rem, 0.75vw, 1rem);
   }
+
+  h2 {
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(1rem, 5vw, 5rem);
+    color: white;
+    background-color: black;
+    padding: 0rem clamp(1rem, 2vw, 3rem);
+    border-radius: clamp(0.4rem, 0.75vw, 1rem);
+  }
+
+  h3 {
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(0.25rem, 5vw, 2.5rem);
+    color: white;
+    background-color: black;
+    padding: 0rem clamp(0.5rem, 2.5vw, 2.5rem);
+    border-radius: clamp(0.4rem, 0.75vw, 1rem);
+  }
+  
 
   .match {
     background-color: white;
