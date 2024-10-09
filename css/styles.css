@@ -20,10 +20,7 @@ body {
   .match {
     background-color: white;
     color: red;
-    font-family: 'Space Mono', monospace;
-    font-size: clamp(3rem, 10vw, 10rem);
-    padding: 0rem clamp(1rem, 2vw, 3rem);
-    border-radius: 0rem clamp(0.4 rem, 0.75vw, 1rem);
+ 
   }
   
   h1:hover {
