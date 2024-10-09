@@ -1,68 +1,63 @@
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*[]/:_-";
 const h1 = document.querySelector("h1");
+const h2 = document.querySelector("h2");
+const h3 = document.querySelector("h3");
 
-let interval = null;
+// Store separate intervals for h1, h2, and h3
+let intervalH1 = null;
+let intervalH2 = null;
+let intervalH3 = null;
 
-window.onload = function() {
-  let iteration = 0;
-  
-  // Clear any existing interval
-  clearInterval(interval);
-  
-  let duration = 2000; // 2 seconds for the initial random letters
-  let startTime = Date.now();
+// Helper function to animate text
+function animateText(target, duration = 1500, intervalTime = 35) {
+    let iteration = 0;
+    let lastIndex = -1;
 
-    // Start the interval for the animation
-    interval = setInterval(() => {
+    const startTime = Date.now();
+    const interval = setInterval(() => {
+        const elapsedTime = Date.now() - startTime;
+        const targetText = target.dataset.value;
 
-      const elapsedTime = Date.now() - startTime;
+        // Update target content based on iteration
+        target.innerHTML = targetText.split("").map((letter, index) => {
+            if (index < iteration) {
+                // If the letter was just revealed, apply the "match" class
+                if (index === lastIndex + 1) {
+                    lastIndex = index;
+                    return `<span class="match">${letter}</span>`;
+                }
+                return `<span>${letter}</span>`;
+            }
+            return `<span>${letters[Math.floor(Math.random() * letters.length)]}</span>`;
+        }).join("");
 
-      h1.innerHTML = h1.dataset.value
-        .split("")
-        .map((letter, index) => {
-          if(index < iteration) {
-            // On each interval, for each iteration, if the current letter is not the target letter, change.
-            return `<span class="match">${h1.dataset.value[index]}</span>`;
-          }
-          // Otherwise, get a number between 0.0 - 1.0 and multiply 
-          return `<span>${letters[Math.floor(Math.random() * letters.length)]}</span>`
-        })
-        .join("");
-      
-      if(iteration >= h1.dataset.value.length){ 
-        clearInterval(interval);
-      }
-      if (elapsedTime >= duration) {
-        iteration += 1 / 3;
-      } else {
-        return;
-      }
-    }, 40);
-  };
-
-
-
-h1.onmouseover = event => {  
-  let iteration = 0;
-  
-  clearInterval(interval);
-  
-  interval = setInterval(() => {
-    event.target.innerHTML = event.target.dataset.value
-      .split("")
-      .map((letter, index) => {
-        if(index < iteration) {
-          return event.target.dataset.value[index];
+        // If all letters are revealed, clear the interval
+        if (iteration >= targetText.length) {
+            clearInterval(interval);
         }
-      
-        return letters[Math.floor(Math.random() * letters.length)]
-      })
-      .join("");
-    
-    if(iteration >= event.target.dataset.value.length){ 
-      clearInterval(interval);
-    }
-    
-    iteration += 1 / 3;
-  }, 30);
+
+        // Increase iteration at the rate of time
+        if (elapsedTime >= duration) {
+            iteration += 1 / 5; // Adjust the rate of animation
+        }
+    }, intervalTime);
+
+    return interval;  // Return the interval ID
+}
+
+// Start animations for h1, h2, and h3 on page load
+window.onload = function () {
+    intervalH1 = animateText(h1, 1500, 35);  // Start for h1
+    intervalH2 = animateText(h2, 3000, 35);  // Start for h2
+    intervalH3 = animateText(h3, 4500, 35);  // Start for h3
 };
+
+// Mouseover events to reset and restart animation on each element
+h1.addEventListener('mouseover', () => {
+    if (intervalH1) {
+        clearInterval(intervalH1);  // Stop current animation for h1
+    }
+    intervalH1 = animateText(h1, 0, 35);  // Restart animation for h1
+});
+
+

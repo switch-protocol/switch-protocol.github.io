@@ -1,12 +1,7 @@
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*[]/:_-";
-const h1 = document.querySelector("h1");
-const h2 = document.querySelector("h2");
-const h3 = document.querySelector("h3");
 
-// Store separate intervals for h1, h2, and h3
-let intervalH1 = null;
-let intervalH2 = null;
-let intervalH3 = null;
+// Store intervals for each element
+let intervals = {};
 
 // Helper function to animate text
 function animateText(target, duration = 1500, intervalTime = 35) {
@@ -36,7 +31,7 @@ function animateText(target, duration = 1500, intervalTime = 35) {
             clearInterval(interval);
         }
 
-        // Increase iteration at the rate of time
+        // Increase iteration as time progresses
         if (elapsedTime >= duration) {
             iteration += 1 / 5; // Adjust the rate of animation
         }
@@ -45,19 +40,37 @@ function animateText(target, duration = 1500, intervalTime = 35) {
     return interval;  // Return the interval ID
 }
 
-// Start animations for h1, h2, and h3 on page load
+// Start animations for all h1 elements on page load
 window.onload = function () {
-    intervalH1 = animateText(h1, 1500, 35);  // Start for h1
-    intervalH2 = animateText(h2, 3000, 35);  // Start for h2
-    intervalH3 = animateText(h3, 4500, 35);  // Start for h3
+    const h1Elements = document.querySelectorAll("h1");
+    h1Elements.forEach((h1) => {
+        intervals[h1.dataset.value] = animateText(h1, 1500, 35);
+    });
+
+    const h2Elements = document.querySelectorAll("h2");
+    h2Elements.forEach((h2) => {
+        intervals[h2.dataset.value] = animateText(h2, 3000, 35);
+    });
+
+    const h3Elements = document.querySelectorAll("h3");
+    h3Elements.forEach((h3) => {
+        intervals[h3.dataset.value] = animateText(h3, 4500, 35);
+    });
 };
 
-// Mouseover events to reset and restart animation on each element
-h1.addEventListener('mouseover', () => {
-    if (intervalH1) {
-        clearInterval(intervalH1);  // Stop current animation for h1
-    }
-    intervalH1 = animateText(h1, 0, 35);  // Restart animation for h1
-});
+// Mouseover event to reset and restart animation on each element
+function restartAnimationOnHover(element, tag) {
+    element.addEventListener('mouseover', () => {
+        // Clear the specific interval for the element
+        if (intervals[element.dataset.value]) {
+            clearInterval(intervals[element.dataset.value]);
+        }
+        // Restart animation for the element
+        intervals[element.dataset.value] = animateText(element, 0, 35);
+    });
+}
 
-
+// Add the mouseover event listeners for all h1, h2, and h3 elements
+document.querySelectorAll("h1").forEach(restartAnimationOnHover);
+document.querySelectorAll("h2").forEach(restartAnimationOnHover);
+document.querySelectorAll("h3").forEach(restartAnimationOnHover);
