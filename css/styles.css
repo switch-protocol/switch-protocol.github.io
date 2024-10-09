@@ -1,7 +1,6 @@
 body {
     font-family: 'Space Mono', monospace;
     display: grid;
-    place-items: center;
     height: 100vh;
     background-color: black;
     color: white;
