@@ -2,67 +2,52 @@ const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*[]/:_-";
 const h1 = document.querySelector("h1");
 
 let interval = null;
+let redToggle = false;  // To track if the letter should be red or not
 
-window.onload = function() {
+// Function to animate the text
+function animateText(target, duration = 2000, intervalTime = 40) {
   let iteration = 0;
+  redToggle = false; // Reset the redToggle for each animation
+  const startTime = Date.now();
   
   // Clear any existing interval
   clearInterval(interval);
-  
-  let duration = 2000; // 2 seconds for the initial random letters
-  let startTime = Date.now();
 
-    // Start the interval for the animation
-    interval = setInterval(() => {
-
-      const elapsedTime = Date.now() - startTime;
-
-      h1.innerHTML = h1.dataset.value
-        .split("")
-        .map((letter, index) => {
-          if(index < iteration) {
-            // On each interval, for each iteration, if the current letter is not the target letter, change.
-            return `<span class="match">${h1.dataset.value[index]}</span>`;
-          }
-          // Otherwise, get a number between 0.0 - 1.0 and multiply 
-          return `<span>${letters[Math.floor(Math.random() * letters.length)]}</span>`
-        })
-        .join("");
-      
-      if(iteration >= h1.dataset.value.length){ 
-        clearInterval(interval);
-      }
-      if (elapsedTime >= duration) {
-        iteration += 1 / 3;
-      } else {
-        return;
-      }
-    }, 40);
-  };
-
-
-
-h1.onmouseover = event => {  
-  let iteration = 0;
-  
-  clearInterval(interval);
-  
   interval = setInterval(() => {
-    event.target.innerHTML = event.target.dataset.value
+    const elapsedTime = Date.now() - startTime;
+
+    target.innerHTML = target.dataset.value
       .split("")
       .map((letter, index) => {
-        if(index < iteration) {
-          return event.target.dataset.value[index];
+        if (index < iteration) {
+          // Toggle red color on matched letters
+          return redToggle
+            ? `<span class="match">${target.dataset.value[index]}</span>`
+            : `<span>${target.dataset.value[index]}</span>`;
         }
-      
-        return letters[Math.floor(Math.random() * letters.length)]
+        // Display random letters for unmatched positions
+        return `<span>${letters[Math.floor(Math.random() * letters.length)]}</span>`;
       })
       .join("");
-    
-    if(iteration >= event.target.dataset.value.length){ 
+
+    // Increase iteration after duration has passed
+    if (iteration >= target.dataset.value.length) {
       clearInterval(interval);
     }
-    
-    iteration += 1 / 3;
-  }, 30);
+
+    if (elapsedTime >= duration) {
+      iteration += 1 / 3;
+      redToggle = !redToggle; // Toggle red color after each full iteration
+    }
+  }, intervalTime);
+}
+
+// Initial load animation
+window.onload = function () {
+  animateText(h1); // Start animation for page load
+};
+
+// Hover effect
+h1.onmouseover = event => {
+  animateText(event.target, 0, 30); // Reset and reanimate text on hover with faster intervals
 };
