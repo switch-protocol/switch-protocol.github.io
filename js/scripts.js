@@ -1,68 +1,75 @@
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*[]/:_-";
 const h1 = document.querySelector("h1");
 const h2 = document.querySelector("h2");
+const h3 = document.querySelector("h3");
 
-let interval = null;
+// Store separate intervals for h1, h2, and h3
+let intervalH1 = null;
+let intervalH2 = null;
+let intervalH3 = null;
 
-// Function to animate the text
+// Helper function to animate text
 function animateText(target, duration = 1500, intervalTime = 35) {
-  let iteration = 0;  // Start from the first letter
-  let lastIndex = -1; // Track the last letter revealed with the red class
+    let iteration = 0;
+    let lastIndex = -1;
 
-  clearInterval(interval);  // Clear any existing intervals
-  const startTime = Date.now();
+    const startTime = Date.now();
+    const interval = setInterval(() => {
+        const elapsedTime = Date.now() - startTime;
+        const targetText = target.dataset.value;
 
-  interval = setInterval(() => {
-    const elapsedTime = Date.now() - startTime;
+        // Update target content based on iteration
+        target.innerHTML = targetText.split("").map((letter, index) => {
+            if (index < iteration) {
+                // If the letter was just revealed, apply the "match" class
+                if (index === lastIndex + 1) {
+                    lastIndex = index;
+                    return `<span class="match">${letter}</span>`;
+                }
+                return `<span>${letter}</span>`;
+            }
+            return `<span>${letters[Math.floor(Math.random() * letters.length)]}</span>`;
+        }).join("");
 
-    // Build the text by iterating through the letters
-    target.innerHTML = target.dataset.value
-      .split("")
-      .map((letter, index) => {
-        if (index < iteration) {
-          // Apply red class to the newly revealed letter for one iteration
-          if (index === lastIndex + 1) {
-            lastIndex = index;  // Update the lastIndex to mark this letter
-            return `<span class="match">${target.dataset.value[index]}</span>`;
-          }
-          // Normal class (no red) after the first reveal
-          return `<span>${target.dataset.value[index]}</span>`;
+        // If all letters are revealed, clear the interval
+        if (iteration >= targetText.length) {
+            clearInterval(interval);
         }
-        // Show random letters for unrevealed positions
-        return `<span>${letters[Math.floor(Math.random() * letters.length)]}</span>`;
-      })
-      .join("");
 
-    // Stop the animation when all letters are revealed
-    if (iteration >= target.dataset.value.length) {
-      clearInterval(interval);
-    }
+        // Increase iteration at the rate of time
+        if (elapsedTime >= duration) {
+            iteration += 1 / 5; // Adjust the rate of animation
+        }
+    }, intervalTime);
 
-    // Update iteration as time progresses
-    if (elapsedTime >= duration) {
-      iteration += 1 / 5;
-    }
-  }, intervalTime);
+    return interval;  // Return the interval ID
 }
 
-// Start animation on page load
+// Start animations for h1, h2, and h3 on page load
 window.onload = function () {
-  animateText(h1,1500,35);  // Initial load animation
-
-  /* Animate all h2 elements
-  h2Headings.forEach((h2, index) => {
-    setTimeout(() => animateText(h2, 0, 35), index * 200);  // Delay between each h2 animation
-  });  
-
-  // Animate all h2 elements
-  h3Headings.forEach((h3, index) => {
-    setTimeout(() => animateText(h3, 0, 35), index * 200);  // Delay between each h2 animation
-  });*/  
+    intervalH1 = animateText(h1, 1500, 35);  // Start for h1
+    intervalH2 = animateText(h2, 3000, 35);  // Start for h2
+    intervalH3 = animateText(h3, 4500, 35);  // Start for h3
 };
 
-/* Mouseover event to reset and restart animation
+// Mouseover events to reset and restart animation on each element
 h1.addEventListener('mouseover', () => {
-  clearInterval(interval);  // Stop any ongoing animation
-  animateText(h1, 0, 35);   // Restart the animation
+    if (intervalH1) {
+        clearInterval(intervalH1);  // Stop current animation for h1
+    }
+    intervalH1 = animateText(h1, 0, 35);  // Restart animation for h1
 });
-*/
+
+h2.addEventListener('mouseover', () => {
+    if (intervalH2) {
+        clearInterval(intervalH2);  // Stop current animation for h2
+    }
+    intervalH2 = animateText(h2, 0, 35);  // Restart animation for h2
+});
+
+h3.addEventListener('mouseover', () => {
+    if (intervalH3) {
+        clearInterval(intervalH3);  // Stop current animation for h3
+    }
+    intervalH3 = animateText(h3, 0, 35);  // Restart animation for h3
+});
