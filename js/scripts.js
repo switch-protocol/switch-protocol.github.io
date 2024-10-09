@@ -22,10 +22,10 @@ window.onload = function() {
         .map((letter, index) => {
           if(index < iteration) {
             // On each interval, for each iteration, if the current letter is not the target letter, change.
-            return h1.dataset.value[index];
+            return `<span class="highlight">${h1.dataset.value[index]}</span>`;
           }
           // Otherwise, get a number between 0.0 - 1.0 and multiply 
-          return letters[Math.floor(Math.random() * letters.length)]
+          return `<span>${letters[Math.floor(Math.random() * letters.length)]}</span>`
         })
         .join("");
       
