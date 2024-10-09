@@ -1,7 +1,7 @@
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*[]/:_-";
-const h1 = document.querySelector("h1");
-const h2 = document.querySelector("h2");
-const h3 = document.querySelector("h3");
+const h1 = document.querySelectorAll("h1");
+const h2 = document.querySelectorAll("h2");
+const h3 = document.querySelectorAll("h3");
 
 let interval = null;
 
@@ -49,12 +49,13 @@ function animateText(target, duration = 1500, intervalTime = 35) {
 // Start animation on page load
 window.onload = function () {
   animateText(h1,1500,35);  // Initial load animation
-  animateText(h2,3000,35);  // Initial load animation
-  animateText(h3,4500,35);  // Initial load animation
+  setTimeout(() => animateText(h2, 500, 35), 100);  // Delay between animations
+  setTimeout(() => animateText(h3, 500, 35), 200);  // Delay between animations
 };
 
-// Mouseover event to reset and restart animation
+/* Mouseover event to reset and restart animation
 h1.addEventListener('mouseover', () => {
   clearInterval(interval);  // Stop any ongoing animation
-  animateText(h1, 0, 35);   // Restart the animation with faster timing
+  animateText(h1, 0, 35);   // Restart the animation
 });
+*/
