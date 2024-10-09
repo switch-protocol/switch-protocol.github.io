@@ -40,7 +40,7 @@ body {
     position: left;
     margin-bottom: 0.25rem;
   }
-  
+
   .match {
     background-color: white;
     color: rgb(255, 80, 80);
@@ -50,6 +50,11 @@ body {
   h1:hover {
     background-color: white;
     color: black;
+  }
+
+  .viewport-image {
+    width: 3vw;   /* 3% of the viewport width */
+    height: auto;  /* Keep aspect ratio */
   }
 
   /* For tablets (width up to 768px) */
