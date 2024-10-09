@@ -4,7 +4,7 @@ const h1 = document.querySelector("h1");
 let interval = null;
 
 // Function to animate the text
-function animateText(target, duration = 2000, intervalTime = 40) {
+function animateText(target, duration = 1500, intervalTime = 35) {
   let iteration = 0;  // Start from the first letter
   let lastIndex = -1; // Track the last letter revealed with the red class
 
