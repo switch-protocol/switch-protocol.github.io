@@ -9,7 +9,6 @@ window.onload = function() {
   // Clear any existing interval
   clearInterval(interval);
   
-  // Delay the start of the animation by 2 seconds (2000 milliseconds)
   let duration = 2000; // 2 seconds for the initial random letters
   let startTime = Date.now();
 
@@ -21,7 +20,7 @@ window.onload = function() {
       h1.innerText = h1.dataset.value
         .split("")
         .map((letter, index) => {
-          if(index < iteration && elapsedTime >= duration) {
+          if(index < iteration) {
             // On each interval, for each iteration, if the current letter is not the target letter, change.
             return h1.dataset.value[index];
           }
@@ -33,8 +32,11 @@ window.onload = function() {
       if(iteration >= h1.dataset.value.length){ 
         clearInterval(interval);
       }
-      
-      iteration += 1 / 3;
+      if (elapsedTime >= duration) {
+        iteration += 1 / 3;
+      } else {
+        return;
+      }
     }, 30);
   };
 
