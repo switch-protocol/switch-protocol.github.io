@@ -1,4 +1,9 @@
 body {
+    background-image: url('/a-microbiology-03-v.jpg');  /* Specify the image path */
+    background-size: contain;  /* Makes sure the image fits without stretching */
+    background-position: center;  /* Centers the image within the body */
+    background-repeat: no-repeat;  /* Prevents the image from repeating */
+    background-attachment: fixed;  /* Fixes the background image in place when scrolling */
     font-family: 'Space Mono', monospace;
     height: 100vh;
     background-color: black;
