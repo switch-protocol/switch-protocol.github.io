@@ -1,3 +1,15 @@
+body {
+    font-family: 'Space Mono', monospace;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    margin: 0rem;
+    overflow: hidden;
+    text-align: center;    /* Align the text to the center */
+  }
+  
   
   h1, h2, h3 {
     font-family: 'Space Mono', monospace;
