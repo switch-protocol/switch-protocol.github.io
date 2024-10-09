@@ -20,7 +20,7 @@ function animateText(target, duration = 2000, intervalTime = 40) {
         if (index < iteration) {
           // Apply red class only to the newly revealed letter
           if (index === Math.floor(iteration - 1) && index > lastIteration) {
-            return `<span class="red">${target.dataset.value[index]}</span>`;
+            return `<span class="match">${target.dataset.value[index]}</span>`;
           }
           // Apply default (no class or normal) after the first reveal
           return `<span>${target.dataset.value[index]}</span>`;
