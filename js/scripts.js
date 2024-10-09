@@ -3,54 +3,66 @@ const h1 = document.querySelector("h1");
 
 let interval = null;
 
-// Function to animate the text
-function animateText(target, duration = 2000, intervalTime = 40) {
-  let iteration = 0;  // Start from the first letter
-  let lastIndex = -1; // Track the last letter revealed with the red class
+window.onload = function() {
+  let iteration = 0;
+  
+  // Clear any existing interval
+  clearInterval(interval);
+  
+  let duration = 2000; // 2 seconds for the initial random letters
+  let startTime = Date.now();
 
-  clearInterval(interval);  // Clear any existing intervals
-  const startTime = Date.now();
+    // Start the interval for the animation
+    interval = setInterval(() => {
 
+      const elapsedTime = Date.now() - startTime;
+
+      h1.innerHTML = h1.dataset.value
+        .split("")
+        .map((letter, index) => {
+          if(index < iteration) {
+            // On each interval, for each iteration, if the current letter is not the target letter, change.
+            return `<span class="match">${h1.dataset.value[index]}</span>`;
+          }
+          // Otherwise, get a number between 0.0 - 1.0 and multiply 
+          return `<span>${letters[Math.floor(Math.random() * letters.length)]}</span>`
+        })
+        .join("");
+      
+      if(iteration >= h1.dataset.value.length){ 
+        clearInterval(interval);
+      }
+      if (elapsedTime >= duration) {
+        iteration += 1 / 3;
+      } else {
+        return;
+      }
+    }, 40);
+  };
+
+
+
+h1.onmouseover = event => {  
+  let iteration = 0;
+  
+  clearInterval(interval);
+  
   interval = setInterval(() => {
-    const elapsedTime = Date.now() - startTime;
-
-    // Build the text by iterating through the letters
-    target.innerHTML = target.dataset.value
+    event.target.innerHTML = event.target.dataset.value
       .split("")
       .map((letter, index) => {
-        if (index < iteration) {
-          // Apply red class to the newly revealed letter for one iteration
-          if (index === lastIndex + 1) {
-            lastIndex = index;  // Update the lastIndex to mark this letter
-            return `<span class="match">${target.dataset.value[index]}</span>`;
-          }
-          // Normal class (no red) after the first reveal
-          return `<span>${target.dataset.value[index]}</span>`;
+        if(index < iteration) {
+          return event.target.dataset.value[index];
         }
-        // Show random letters for unrevealed positions
-        return `<span>${letters[Math.floor(Math.random() * letters.length)]}</span>`;
+      
+        return letters[Math.floor(Math.random() * letters.length)]
       })
       .join("");
-
-    // Stop the animation when all letters are revealed
-    if (iteration >= target.dataset.value.length) {
+    
+    if(iteration >= event.target.dataset.value.length){ 
       clearInterval(interval);
     }
-
-    // Update iteration as time progresses
-    if (elapsedTime >= duration) {
-      iteration += 1 / 3;
-    }
-  }, intervalTime);
-}
-
-// Start animation on page load
-window.onload = function () {
-  animateText(h1);  // Initial load animation
+    
+    iteration += 1 / 3;
+  }, 30);
 };
-
-// Mouseover event to reset and restart animation
-h1.addEventListener('mouseover', () => {
-  clearInterval(interval);  // Stop any ongoing animation
-  animateText(h1, 0, 30);   // Restart the animation with faster timing
-});
