@@ -54,7 +54,7 @@ window.onload = function () {
 
     const h3Elements = document.querySelectorAll("h3");
     h3Elements.forEach((h3) => {
-        intervals[h3.dataset.value] = animateText(h3, 3500, 35, 2);
+        intervals[h3.dataset.value] = animateText(h3, 4000, 35, 2);
     });
 };
 
