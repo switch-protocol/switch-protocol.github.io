@@ -1,13 +1,15 @@
 body {
     font-family: 'Space Mono', monospace;
-    display: grid;
-    place-items: center;
-    height: 100vh;
+    /* Remove grid layout */
+    /* display: grid; */
+    /* place-items: center; */
+    height: auto; /* Let the page extend beyond 100vh */
+    overflow: visible; /* Allow content to overflow if necessary */
     background-color: black;
     color: white;
-    margin: 0rem;
-    overflow: hidden;
-  }
+    margin: 0;
+    padding: 1rem; /* Add padding for spacing */
+}
   
   h1 {
     font-family: 'Space Mono', monospace;
