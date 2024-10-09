@@ -17,7 +17,7 @@ window.onload = function() {
 
       const elapsedTime = Date.now() - startTime;
 
-      h1.innerText = h1.dataset.value
+      h1.innerHTML = h1.dataset.value
         .split("")
         .map((letter, index) => {
           if(index < iteration) {
@@ -48,7 +48,7 @@ h1.onmouseover = event => {
   clearInterval(interval);
   
   interval = setInterval(() => {
-    event.target.innerText = event.target.innerText
+    event.target.innerHTML = event.target.dataset.value
       .split("")
       .map((letter, index) => {
         if(index < iteration) {
