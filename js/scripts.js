@@ -72,5 +72,3 @@ function restartAnimationOnHover(element, tag) {
 
 // Add the mouseover event listeners for all h1, h2, and h3 elements
 document.querySelectorAll("h1").forEach(restartAnimationOnHover);
-document.querySelectorAll("h2").forEach(restartAnimationOnHover);
-document.querySelectorAll("h3").forEach(restartAnimationOnHover);
