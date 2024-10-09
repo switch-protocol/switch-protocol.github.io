@@ -4,6 +4,7 @@ body {
     place-items: center;
     height: 100vh;
     background-color: black;
+    color: white;
     margin: 0rem;
     overflow: hidden;
   }
