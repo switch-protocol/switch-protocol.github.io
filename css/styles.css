@@ -1,5 +1,5 @@
 body {
-    background-image: url('/a-microbiology-03-v.jpg');  /* Specify the image path */
+    background-image: url('images/a-microbiology-03-v.jpg');  /* Specify the image path */
     background-size: contain;  /* Makes sure the image fits without stretching */
     background-position: center;  /* Centers the image within the body */
     background-repeat: no-repeat;  /* Prevents the image from repeating */
