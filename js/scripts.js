@@ -39,18 +39,18 @@ function animateText(target, duration = 2000, intervalTime = 40) {
 
     // Update iteration as time progresses
     if (elapsedTime >= duration) {
-      iteration += 1 / 5;
+      iteration += 1 / 4;
     }
   }, intervalTime);
 }
 
 // Start animation on page load
 window.onload = function () {
-  animateText(h1,2000,40);  // Initial load animation
+  animateText(h1,1500,35);  // Initial load animation
 };
 
 // Mouseover event to reset and restart animation
 h1.addEventListener('mouseover', () => {
   clearInterval(interval);  // Stop any ongoing animation
-  animateText(h1, 0, 40);   // Restart the animation with faster timing
+  animateText(h1, 0, 35);   // Restart the animation with faster timing
 });
