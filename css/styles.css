@@ -4,6 +4,7 @@ body {
     background-color: black;
     color: white;
     margin: 0;
+    padding: 0 2rem;
     overflow: hidden;
   }
   
@@ -29,12 +30,14 @@ body {
     font-size: clamp(1rem, 5vw, 5rem);
     text-align: left;
     position: left;
+    margin-bottom: 0.5rem;
   }
 
   h3 {
     font-size: clamp(0.25rem, 2.5vw, 2.5rem);
     text-align: left;
     position: left;
+    margin-bottom: 0.25rem;
   }
   
 
