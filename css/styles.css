@@ -21,12 +21,12 @@
 
   h3 {
     font-family: 'Space Mono', monospace;
-    font-size: clamp(0.25rem, 5vw, 2.5rem);
+    font-size: clamp(0.25rem, 2.5vw, 2.5rem);
     color: white;
     background-color: black;
     padding: 0rem clamp(0.5rem, 2.5vw, 2.5rem);
     border-radius: clamp(0.4rem, 0.75vw, 1rem);
-    postition: left;
+    position: left;
   }
   
 
