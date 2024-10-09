@@ -7,7 +7,6 @@ body {
     color: white;
     margin: 0rem;
     overflow: hidden;
-    text-align: center;    /* Align the text to the center */
   }
   
   
@@ -17,7 +16,7 @@ body {
     background-color: black;
     padding: 0rem clamp(1rem, 2vw, 3rem);
     border-radius: clamp(0.4rem, 0.75vw, 1rem);
-    margin: 0.1;             /* Remove any default margins */
+    margin: 0;             /* Remove any default margins */
     padding: 0;            /* Remove any default padding */
     line-height: 1.1;      /* Adjust line-height to reduce vertical space */
   }
@@ -25,17 +24,17 @@ body {
   h1 {
     
     font-size: clamp(3rem, 10vw, 10rem);
-    position: center;
+    text-align: center;
   }
 
   h2 {
     font-size: clamp(1rem, 5vw, 5rem);
-    position: left;
+    text-align: left;
   }
 
   h3 {
     font-size: clamp(0.25rem, 2.5vw, 2.5rem);
-    position: left;
+    text-align: left;
   }
   
 
