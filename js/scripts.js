@@ -10,14 +10,18 @@ window.onload = function() {
   clearInterval(interval);
   
   // Delay the start of the animation by 2 seconds (2000 milliseconds)
-  
+  let duration = 2000; // 2 seconds for the initial random letters
+  let startTime = Date.now();
 
     // Start the interval for the animation
     interval = setInterval(() => {
+
+      const elapsedTime = Date.now() - startTime;
+
       h1.innerText = h1.dataset.value
         .split("")
         .map((letter, index) => {
-          if(index < iteration) {
+          if(index < iteration && elapsedTime >= duration) {
             // On each interval, for each iteration, if the current letter is not the target letter, change.
             return h1.dataset.value[index];
           }
