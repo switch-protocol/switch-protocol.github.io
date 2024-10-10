@@ -23,6 +23,42 @@ document.querySelectorAll('.link').forEach(function(anchor) {
     }
 });
 
+// Helper function to add hover behavior to both the link and its container
+function handleLinkHover() {
+    const elements = document.querySelectorAll("h2, h3");
+
+    elements.forEach((element) => {
+        const link = element.querySelector("a");
+        
+        // Hover over the text (the link itself)
+        link.addEventListener('mouseover', () => {
+            link.style.color = 'rgb(255, 80, 80)';  // Red when over the text
+        });
+
+        // Hover over the container (h1, h2, h3), excluding the link
+        element.addEventListener('mouseover', () => {
+            if (!link.matches(':hover')) {
+                link.style.color = 'black';  // Black when over the container, but not the link itself
+            }
+        });
+
+        // Reset color when the mouse leaves the element
+        element.addEventListener('mouseleave', () => {
+            link.style.color = 'inherit';  // Reset to the original color
+        });
+
+        // Reset color when the mouse leaves the link
+        link.addEventListener('mouseleave', () => {
+            link.style.color = 'inherit';  // Reset to the original color
+        });
+    });
+}
+
+// Run the function on page load
+window.onload = function () {
+    handleLinkHover();
+};
+
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*[]/:_-";
 
 // Store intervals for each element
