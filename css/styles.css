@@ -37,7 +37,7 @@
 
   h1:hover, h2:hover, h3:hover {
     background-color: white;     /* Change background on hover */
-    color: black;           
+    color: rgb(255, 80, 80);          
     text-decoration: none;       /* Ensure no underline on hover */
   }
 
@@ -95,6 +95,8 @@
   .viewport-image {
     width: 4vw;   /* 50% of the viewport width */
     height: auto;  /* Keep aspect ratio */
+    border-radius: 5px;  /* Adjust this value for rounded corners */
+    object-fit: cover;  /* Ensures image is cropped appropriately */
   }
 
   /* For tablets (width up to 768px) */
