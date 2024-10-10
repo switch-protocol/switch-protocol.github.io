@@ -38,6 +38,17 @@
     animation: flashThreeTimes 0.5s forwards;
   }
 
+  /* Add ">" when hovering over h2 */
+  h2:hover::before {
+    content: "=";          /* The character to insert */
+    position: absolute;     /* Position it to the left of the text */
+    left: 0;                /* Align it on the far left */
+    top: 0;                 /* Vertically align it with the top of the element */
+    color: red;             /* Customize the color */
+}
+
+
+  
   h1 a:visited, h2 a:visited, h3 a:visited {
     color: inherit;
     text-decoration: none;                 /* Ensure visited links have the same color */
