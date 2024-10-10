@@ -35,7 +35,7 @@
   h2:hover, h3:hover {
     color: rgb(255, 80, 80);      
     text-decoration: none;       /* Ensure no underline on hover */
-    animation: flashThreeTimes 1.2s forwards;
+    animation: flashThreeTimes 0.2s forwards;
   }
 
   h1 a:visited, h2 a:visited, h3 a:visited {
@@ -134,7 +134,7 @@
 /* When the element is hovered, apply the flicker/move animation */
 .scanline-effect:hover::after {
   opacity: 1;               /* Make the scanline visible on hover */
-  animation: flickerMoveAnimation 1s infinite; /* Animation for flicker and movement */
+  animation: flickerMoveAnimation s infinite; /* Animation for flicker and movement */
 }
 
 /* Keyframes for flicker/move animation */
@@ -173,7 +173,7 @@
     background-color: black; /* Flash back */
   }
   60% {
-    background-color: red; /* Flash to color 2 */
+    background-color: rgb(255, 255, 255); /* Flash to color 2 */
   }
   80% {
     background-color: black; /* Flash back */
