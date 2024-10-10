@@ -114,8 +114,8 @@
 .scanline-effect {
   position: relative; /* To allow scanline positioning */
   display: inline-block; /* Keeps it inline with text */
-  width: inherit; /* Let the width be determined by the content */
-  height: inherit;
+  width: auto; /* Let the width be determined by the content */
+  height: auto;
   white-space: nowrap; /* Prevent text from wrapping */
   overflow: hidden; /* Hide any overflow */
   cursor: pointer; /* Optional: gives a pointer on hover */
