@@ -130,7 +130,7 @@
 /* When the element is hovered, apply the flicker/move animation */
 .scanline-effect:hover::after {
   opacity: 1;               /* Make the scanline visible on hover */
-  animation: flickerMoveAnimation 0.5s forwards; /* Animation for flicker and movement */
+  animation: flickerMoveAnimation 0.25s infinite; /* Animation for flicker and movement */
 }
 
 /* Keyframes to create the flicker and jump effect */
