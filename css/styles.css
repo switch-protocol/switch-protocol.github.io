@@ -22,7 +22,6 @@
   }
 
   h1 a:hover, h2 a:hover, h3 a:hover {
-    background-color: white;     /* Change background on hover */
     color: rgb(255, 80, 80);                /* Change text color on hover */
     text-decoration: none;       /* Ensure no underline on hover */
   }
@@ -34,11 +33,13 @@
   }
 
   h1 a:visited, h2 a:visited, h3 a:visited {
-    color: inherit;              /* Ensure visited links have the same color */
+    color: inherit;
+    text-decoration: none;                 /* Ensure visited links have the same color */
   }
 
   h1 a:active, h2 a:active, h3 a:active {
-    color: inherit;              /* No color change when the link is active/clicked */
+    color: inherit;
+    text-decoration: none;                 /* No color change when the link is active/clicked */
   }
     
   h1, h2, h3 {
