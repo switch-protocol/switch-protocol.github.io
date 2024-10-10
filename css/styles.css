@@ -119,7 +119,8 @@
   content: "";              /* Empty content for the pseudo-element */
   position: absolute;       /* To overlay the element */
   top: 0; left: 0;          /* Full cover */
-  width: 100%; height: 100%;
+  width: 100%; 
+  height: 2px;
   background: rgba(0, 0, 0, 0.5); /* Color and opacity of the scanline */
   opacity: 0;                 /* Make it invisible initially */
   pointer-events: none;       /* Prevent the overlay from blocking interaction */
@@ -135,21 +136,27 @@
 /* Keyframes to animate the scanlines */
 @keyframes scanlinesAnimation {
   0% {
+      opacity: 0;
       transform: translateY(-50%);
   }
   20% {
+      opacity: 1;
       transform: translateY(-60%);
   }
   40% {
+      opacity: 1;
       transform: translateY(50%);
   }
   60% {
+      opacity: 0;
       transform: translateY(-20%);
   }
   80% {
+      opacity: 1;
       transform: translateY(20%);
   }
   100% {
+      opacity: 0;
       transform: translateY(0);
   }
 }
