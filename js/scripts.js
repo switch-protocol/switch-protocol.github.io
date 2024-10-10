@@ -100,7 +100,6 @@ document.querySelectorAll("h1").forEach(restartAnimationOnHover);
 
 // Function to set a random vertical position for the scanline
 function setRandomPosition(element) {
-    // Get the height of the element
     const containerHeight = element.offsetHeight;
   
     // Generate a random position between 0 and the height of the container
@@ -116,5 +115,6 @@ function setRandomPosition(element) {
       setRandomPosition(element);
     });
   });
+  
   
   

@@ -99,33 +99,45 @@
     object-fit: cover;  /* Ensures image is cropped appropriately */
   }
 
+/* Base styling for the link class */
+.link {
+  text-decoration: none;
+  color: inherit; /* Inherit color from parent */
+}
+
+.link:hover {
+  color: red; /* Change color when hovered */
+  cursor: pointer; /* Optional: gives a pointer on hover */
+}
+
 /* Base styling for scanline-effect */
 .scanline-effect {
   position: relative; /* To allow scanline positioning */
   display: inline-block; /* Keeps it inline with text */
   width: auto; /* Let the width be determined by the content */
-  height: auto;
+  white-space: nowrap; /* Prevent text from wrapping */
   overflow: hidden; /* Hide any overflow */
   cursor: pointer; /* Optional: gives a pointer on hover */
+  height: 60px; /* Ensure that the element has a minimum height (adjust as necessary) */
 }
 
 /* Scanline styling */
 .scanline-effect::after {
   content: "";              /* Empty content for the pseudo-element */
   position: absolute;       /* To overlay the element */
-  top: 0; left: 0;          /* Start at the top-left */
+  top: 0; left: 0;          /* Start at the top-left of the container */
   width: 100%;              /* Full width of the container */
-  height: 1px;              /* The height of the scanline */
+  height: 2px;              /* The height of the scanline */
   background: rgba(0, 0, 0, 0.5); /* Color and opacity of the scanline */
   opacity: 0;               /* Make it invisible initially */
   pointer-events: none;     /* Prevent the overlay from blocking interaction */
-  transition: opacity 0.2s ; /* Quick fade-in/fade-out */
+  transition: opacity 0.2s ease, transform 0.2s ease; /* Quick fade-in/fade-out */
 }
 
 /* When the element is hovered, apply the flicker/move animation */
 .scanline-effect:hover::after {
   opacity: 1;               /* Make the scanline visible on hover */
-  animation: flickerMoveAnimation 0.25s infinite; /* Animation for flicker and movement */
+  animation: flickerMoveAnimation 1s infinite; /* Animation for flicker and movement */
 }
 
 /* Keyframes for flicker/move animation */
@@ -151,7 +163,6 @@
     transform: translateY(var(--random-position)); /* Reappears at the random position */
   }
 }
-
 
   /* For tablets (width up to 768px) */
 @media (max-width: 768px) {
