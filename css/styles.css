@@ -39,10 +39,10 @@
   }
 
   /* Add ">" when hovering over h2 */
-  h2:hover::before {
-    content: "=";          /* The character to insert */
+  h2:hover::before,h3:hover::before {
+    content: ">";          /* The character to insert */
     position: relative;     /* Position it to the left of the text */
-    color: red;             /* Customize the color */
+    color: rgb(255, 80, 80);        /* Customize the color */
 }
 
 
@@ -61,7 +61,6 @@
     font-family: 'Space Mono', monospace;
     background-color: black;
     padding: 0rem clamp(1rem, 2vw, 3rem);
-    border-radius: clamp(0.4rem, 0.75vw, 1rem);
     margin: 0;             /* Remove any default margins */
     padding: 0;            /* Remove any default padding */
     line-height: 1.1;      /* Adjust line-height to reduce vertical space */
@@ -69,12 +68,14 @@
   
   h1 {
     color: white;
+    border-radius: clamp(0.4rem, 0.75vw, 1rem);
     font-size: clamp(3rem, 10vw, 10rem);
     text-align: center;
   }
 
   h2 {
     color:rgb(148, 212, 255);
+    border-radius: clamp(0.4rem, 0.75vw, 1rem);
     font-size: clamp(1rem, 5vw, 5rem);
     text-align: left;
     position: left;
@@ -89,6 +90,7 @@
     position: left;
     width: 50%;
     margin-bottom: 0.3rem;
+    border-radius: clamp(0.2rem, 0.375vw, 0.5rem);
   }
 
   .match {
