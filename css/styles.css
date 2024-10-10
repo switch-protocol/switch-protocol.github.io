@@ -139,7 +139,7 @@
     transform: translateY(0); /* Disappears at top */
   }
   40% {
-    opacity: 1;
+    opacity: 0;
     transform: translateY(var(--random-position)); /* Jumps to random vertical position */
   }
   60% {
