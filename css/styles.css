@@ -17,9 +17,6 @@
     text-decoration: none;
   }
 
-  a:hover {
-    color: rgb(255, 80, 80);
-  }
 
   /* General link styling for all h1, h2, and h3 */
   h1 a, h2 a, h3 a {
@@ -36,8 +33,7 @@
   }
 
   h2:hover, h3:hover {
-    color: rgb(255, 80, 80);
-    background-color: white;     /* Change background on hover */         
+    color: rgb(255, 80, 80);      
     text-decoration: none;       /* Ensure no underline on hover */
     animation: flashThreeTimes 1.2s forwards;
   }
@@ -171,7 +167,7 @@
     background-color: black; /* Initial color */
   }
   20% {
-    background-color: red; /* Flash to color 1 */
+    background-color: rgb(255, 255, 255); /* Flash to color 1 */
   }
   40% {
     background-color: black; /* Flash back */
@@ -183,7 +179,7 @@
     background-color: black; /* Flash back */
   }
   100% {
-    background-color: green; /* Final color after flashes */
+    background-color: white; /* Final color after flashes */
   }
 }
 
