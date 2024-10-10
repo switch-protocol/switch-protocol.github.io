@@ -38,8 +38,8 @@
     animation: flashThreeTimes 0.5s forwards;
   }
 
-  /* Add ">" when hovering over h2 */
-  h2:hover::before,h3:hover::before {
+  /* Add ">" when hovering over h2 and h3*/
+  h2:hover::before, h3:hover::before {
     content: ">";          /* The character to insert */
     position: relative;     /* Position it to the left of the text */
     color: rgb(255, 80, 80);        /* Customize the color */
