@@ -100,14 +100,14 @@
   }
 
   /* Base styling for the element */
-.scanline-container {
+.scanline-effect {
   position: relative;       /* To position the scanline overlay */
   display: inline-block;    /* Adjust as per the layout */
   overflow: hidden;         /* Ensure lines don't spill outside */
   cursor: pointer;          /* Optional: gives a pointer on hover */
 }
 
-.scanline-container img {
+.scanline-effect img {
   display: block;           /* Prevents space below the image */
   width: 100%;              /* Ensure the image fills the container */
   height: 100%;             /* Adjust as necessary */
@@ -115,7 +115,7 @@
 }
 
 /* Create the scanline effect */
-.scanline-container::after {
+.scanline-effect::after {
   content: "";              /* Empty content for the pseudo-element */
   position: absolute;       /* To overlay the element */
   top: 0; left: 0;          /* Full cover */
@@ -133,7 +133,7 @@
 }
 
 /* When the element is hovered, show the scanlines */
-.scanline-container:hover::after {
+.scanline-effect:hover::after {
   opacity: 1;                /* Show the scanlines */
   animation: scanlinesAnimation 2.0s infinite; /* Animation for scanline movement */
 }
