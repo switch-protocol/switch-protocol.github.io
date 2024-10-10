@@ -13,25 +13,34 @@ body {
     overflow: hidden;
   }
 
-  /* General link styling for all h1, h2, and h3 */
+/* General link styling for all h1, h2, and h3 */
 h1 a, h2 a, h3 a {
-  color: inherit;           /* Keep the original text color */
-  text-decoration: none;    /* Remove the underline from links */
+  color: inherit;              /* Keep the original text color */
+  text-decoration: none;       /* Remove the underline from links */
+  display: inline-block;       /* Ensure the link only takes up the space of the text */
+  line-height: 1.1;            /* Set the line height to control vertical spacing */
+  padding: 0;                  /* Remove any padding to avoid excess space */
 }
 
 h1 a:hover, h2 a:hover, h3 a:hover {
-  color: inherit;
-  background-color: white;           /* Keep the color unchanged on hover */
-  text-decoration: none;    /* Ensure no underline on hover */
+  background-color: white;     /* Change background on hover */
+  color: black;                /* Change text color on hover */
+  text-decoration: none;       /* Ensure no underline on hover */
+}
+
+h1:hover, h2:hover, h3:hover {
+  background-color: white;     /* Change background on hover */              
+  text-decoration: none;       /* Ensure no underline on hover */
 }
 
 h1 a:visited, h2 a:visited, h3 a:visited {
-  color: inherit;           /* Ensure visited links have the same color */
+  color: inherit;              /* Ensure visited links have the same color */
 }
 
 h1 a:active, h2 a:active, h3 a:active {
-  color: inherit;           /* No color change when the link is active/clicked */
+  color: inherit;              /* No color change when the link is active/clicked */
 }
+
   
   
   h1, h2, h3 {
