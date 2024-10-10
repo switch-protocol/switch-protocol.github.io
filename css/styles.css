@@ -103,8 +103,7 @@
 .scanline-effect {
   position: relative; /* To allow scanline positioning */
   display: inline-block; /* Keeps it inline with text */
-  width: inherit; /* Let the width be determined by the content */
-  height: inherit; /* Let the width be determined by the content */
+  width: auto; /* Let the width be determined by the content */
   white-space: nowrap; /* Prevent text from wrapping */
   overflow: hidden; /* Hide any overflow */
   cursor: pointer; /* Optional: gives a pointer on hover */
@@ -120,7 +119,7 @@
   background: rgba(0, 0, 0, 0.5); /* Color and opacity of the scanline */
   opacity: 0;               /* Make it invisible initially */
   pointer-events: none;     /* Prevent the overlay from blocking interaction */
-  transition: opacity 0.2s ease; /* Quick fade-in/fade-out */
+  transition: opacity 0.2s ease, transform 0.2s ease; /* Quick fade-in/fade-out */
 }
 
 /* When the element is hovered, apply the flicker/move animation */
@@ -136,15 +135,15 @@
     transform: translateY(0); /* Scanline starts at the top */
   }
   20% {
-    opacity: 1;
+    opacity: 0;
     transform: translateY(0); /* Disappears at top */
   }
   40% {
-    opacity: 1;
+    opacity: 0;
     transform: translateY(var(--random-position)); /* Jumps to random vertical position */
   }
   60% {
-    opacity: 1;
+    opacity: 0;
     transform: translateY(var(--random-position)); /* Stays at random position */
   }
   100% {
