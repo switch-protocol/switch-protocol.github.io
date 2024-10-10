@@ -18,8 +18,7 @@ h1 a, h2 a, h3 a {
   color: inherit;              /* Keep the original text color */
   text-decoration: none;       /* Remove the underline from links */
   display: inline-block;       /* Ensure the link only takes up the space of the text */
-  line-height: 1.1;            /* Set the line height to control vertical spacing */
-  padding: 0;                  /* Remove any padding to avoid excess space */
+
 }
 
 h1 a:hover, h2 a:hover, h3 a:hover {
