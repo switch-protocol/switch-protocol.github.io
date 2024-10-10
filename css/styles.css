@@ -35,7 +35,7 @@
   h2:hover, h3:hover {
     color: rgb(255, 80, 80);      
     text-decoration: none;       /* Ensure no underline on hover */
-    animation: flashThreeTimes 0.2s forwards;
+    animation: flashThreeTimes 0.1s forwards;
   }
 
   h1 a:visited, h2 a:visited, h3 a:visited {
