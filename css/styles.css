@@ -12,6 +12,26 @@ body {
     padding: 3rem 3rem;
     overflow: hidden;
   }
+
+  /* General link styling for all h1, h2, and h3 */
+h1 a, h2 a, h3 a {
+  color: inherit;           /* Keep the original text color */
+  text-decoration: none;    /* Remove the underline from links */
+}
+
+h1 a:hover, h2 a:hover, h3 a:hover {
+  color: inherit;
+  background-color: white;           /* Keep the color unchanged on hover */
+  text-decoration: none;    /* Ensure no underline on hover */
+}
+
+h1 a:visited, h2 a:visited, h3 a:visited {
+  color: inherit;           /* Ensure visited links have the same color */
+}
+
+h1 a:active, h2 a:active, h3 a:active {
+  color: inherit;           /* No color change when the link is active/clicked */
+}
   
   
   h1, h2, h3 {
