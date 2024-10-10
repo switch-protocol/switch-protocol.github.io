@@ -17,6 +17,10 @@
     text-decoration: none;
   }
 
+  a:hover {
+    color: rgb(255, 80, 80);
+  }
+
   /* General link styling for all h1, h2, and h3 */
   h1 a, h2 a, h3 a {
     color: inherit;              /* Keep the original text color */
