@@ -140,15 +140,15 @@
     transform: translateY(0); /* Start from its initial position (top of container) */
   }
   20% {
-    opacity: 1;              /* Scanline disappears */
+    opacity: 0;              /* Scanline disappears */
     transform: translateY(0); /* Stay at initial position */
   }
   40% {
-    opacity: 1;              /* Scanline fully visible */
+    opacity: 0;              /* Scanline is still invisible */
     transform: translateY(var(--random-position)); /* Jump to a random position */
   }
   60% {
-    opacity: 1;              /* Still invisible */
+    opacity: 0;              /* Still invisible */
     transform: translateY(var(--random-position)); /* Stay at the random position */
   }
   100% {

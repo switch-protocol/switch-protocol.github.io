@@ -100,10 +100,13 @@ document.querySelectorAll("h1").forEach(restartAnimationOnHover);
 
 document.querySelectorAll('.scanline-effect').forEach(function(container) {
     container.addEventListener('mouseenter', function() {
-      // Generate a random value between 0% and 100% for vertical position
-      const randomPosition = Math.random() * 100;  // Random vertical position (percentage)
-      
+      // Get the height of the container
+      const containerHeight = container.offsetHeight;
+  
+      // Generate a random value between 0% and 100% of the container's height
+      const randomPosition = Math.random() * containerHeight;  // Random vertical position
+  
       // Set the custom property (--random-position) for the container
-      container.style.setProperty('--random-position', `${randomPosition}%`);
+      container.style.setProperty('--random-position', `${randomPosition}px`);
     });
   });
