@@ -98,15 +98,22 @@ function restartAnimationOnHover(element) {
 // Add the mouseover event listeners for all h1, h2, and h3 elements
 document.querySelectorAll("h1").forEach(restartAnimationOnHover);
 
-document.querySelectorAll('.scanline-effect').forEach(function(container) {
-    container.addEventListener('mouseenter', function() {
-      // Get the height of the container
-      const containerHeight = container.offsetHeight;
+// Function to set a random vertical position for the scanline
+function setRandomPosition(element) {
+    // Get the height of the element
+    const containerHeight = element.offsetHeight;
   
-      // Generate a random value between 0% and 100% of the container's height
-      const randomPosition = Math.random() * containerHeight;  // Random vertical position
+    // Generate a random position between 0 and the height of the container
+    const randomPosition = Math.random() * containerHeight;
   
-      // Set the custom property (--random-position) for the container
-      container.style.setProperty('--random-position', `${randomPosition}px`);
+    // Set the CSS variable for random position
+    element.style.setProperty('--random-position', `${randomPosition}px`);
+  }
+  
+  // Apply the random position whenever the element is hovered
+  document.querySelectorAll('.scanline-effect').forEach(function(element) {
+    element.addEventListener('mouseenter', function() {
+      setRandomPosition(element);
     });
   });
+  
