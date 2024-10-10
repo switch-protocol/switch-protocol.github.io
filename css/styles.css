@@ -102,9 +102,11 @@
 /* Base styling for scanline-effect */
 .scanline-effect {
   position: relative;       /* To position the scanline overlay */
-  display: inline-block;    /* Adjust as per the layout */
+  display: inline-block;    /* Keeps it inline with text */
   overflow: hidden;         /* Ensure lines don't spill outside */
   cursor: pointer;          /* Optional: gives a pointer on hover */
+  width: 100%;              /* Ensure it takes full width */
+  white-space: nowrap;      /* Prevent text from wrapping */
 }
 
 /* Scanline style */
