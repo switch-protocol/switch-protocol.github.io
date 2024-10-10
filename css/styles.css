@@ -37,8 +37,7 @@
 
   h2:hover, h3:hover {
     color: rgb(255, 80, 80);
-    background-color: white;     /* Change background on hover */
-    color: black;           
+    background-color: white;     /* Change background on hover */         
     text-decoration: none;       /* Ensure no underline on hover */
   }
 
