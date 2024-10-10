@@ -1,3 +1,7 @@
+
+
+
+
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*[]/:_-";
 
 // Store intervals for each element
@@ -77,3 +81,5 @@ function restartAnimationOnHover(element, tag) {
 
 // Add the mouseover event listeners for all h1, h2, and h3 elements
 document.querySelectorAll("h1").forEach(restartAnimationOnHover);
+
+
