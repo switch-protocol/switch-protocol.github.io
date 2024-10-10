@@ -99,7 +99,7 @@
     object-fit: cover;  /* Ensures image is cropped appropriately */
   }
 
- /* Base styling for the element */
+/* Base styling for the element */
 .scanline-effect {
   position: relative;       /* To position the scanline overlay */
   display: inline-block;    /* Adjust as per the layout */
@@ -118,45 +118,44 @@
 .scanline-effect::after {
   content: "";              /* Empty content for the pseudo-element */
   position: absolute;       /* To overlay the element */
-  top: 0; left: 50%;        /* Center it horizontally */
-  width: 2px;               /* The width of the scanline */
-  height: 100%;             /* The scanline covers the full height */
+  top: 0; left: 0;          /* Start at the top-left */
+  width: 100%;              /* Full width of the container */
+  height: 2px;              /* The height of the scanline */
   background: rgba(0, 0, 0, 0.5); /* Color and opacity of the scanline */
   opacity: 0;               /* Make it invisible initially */
   pointer-events: none;     /* Prevent the overlay from blocking interaction */
-  transition: opacity 0.2s ease; /* Quick fade-in/fade-out */
+  transition: opacity 0.2s ease, transform 0.2s ease; /* Quick fade-in/fade-out */
 }
 
 /* When the element is hovered, apply the flicker/move animation */
 .scanline-effect:hover::after {
   opacity: 1;               /* Make the scanline visible on hover */
-  animation: flickerMoveAnimation 1s forwards; /* Animation for flicker and movement */
+  animation: flickerMoveAnimation 0.5s forwards; /* Animation for flicker and movement */
 }
 
-/* Keyframes to create the flicker and move effect */
+/* Keyframes to create the flicker and jump effect */
 @keyframes flickerMoveAnimation {
   0% {
     opacity: 1;              /* Scanline fully visible */
-    transform: translateY(0); /* Start from the top */
+    transform: translateY(0); /* Start from its initial position (top of container) */
   }
   20% {
     opacity: 0;              /* Scanline disappears */
-    transform: translateY(0); /* Stay in the same position */
+    transform: translateY(0); /* Stay at initial position */
   }
   40% {
-    opacity: 0;              /* Scanline still invisible */
-    transform: translateY(var(--random-position)); /* Move to random position */
+    opacity: 0;              /* Scanline is still invisible */
+    transform: translateY(var(--random-position)); /* Jump to a random position */
   }
   60% {
-    opacity: 0;              /* Scanline still invisible */
-    transform: translateY(var(--random-position)); /* Stay at random position */
+    opacity: 0;              /* Still invisible */
+    transform: translateY(var(--random-position)); /* Stay at the random position */
   }
   100% {
     opacity: 1;              /* Scanline reappears */
-    transform: translateY(var(--random-position)); /* Stay at random position */
+    transform: translateY(var(--random-position)); /* Stay at the random position */
   }
 }
-
 
 
   /* For tablets (width up to 768px) */
