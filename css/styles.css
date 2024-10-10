@@ -119,13 +119,13 @@
   background: rgba(0, 0, 0, 0.5); /* Color and opacity of the scanline */
   opacity: 0;               /* Make it invisible initially */
   pointer-events: none;     /* Prevent the overlay from blocking interaction */
-  transition: opacity 0.2s ease, transform 0.2s ease; /* Quick fade-in/fade-out */
+  transition: opacity 0.2s ease; /* Quick fade-in/fade-out */
 }
 
 /* When the element is hovered, apply the flicker/move animation */
 .scanline-effect:hover::after {
   opacity: 1;               /* Make the scanline visible on hover */
-  animation: flickerMoveAnimation 0.5s infinite; /* Animation for flicker and movement */
+  animation: flickerMoveAnimation 0.25s infinite; /* Animation for flicker and movement */
 }
 
 /* Keyframes for flicker/move animation */
