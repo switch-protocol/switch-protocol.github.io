@@ -124,40 +124,36 @@
   background: rgba(0, 0, 0, 0.5); /* Color and opacity of the scanline */
   opacity: 0;                 /* Make it invisible initially */
   pointer-events: none;       /* Prevent the overlay from blocking interaction */
-  transition: opacity 0.3s ease; /* Fade-in effect */
+
 }
 
 /* When the element is hovered, show the scanlines */
 .scanline-effect:hover::after {
   opacity: 1;                /* Show the scanlines */
-  animation: scanlinesAnimation 2.0s infinite; /* Animation for scanline movement */
+  animation: scanlinesAnimation 1.0s infinite; /* Animation for scanline movement */
 }
 
-/* Keyframes to animate the scanlines */
+/* Keyframes to create the flicker and move effect */
 @keyframes scanlinesAnimation {
   0% {
-      opacity: 0;
-      transform: translateY(-50%);
+    opacity: 1;              /* Scanline fully visible */
+    transform: translateY(0); /* Start from the top */
   }
-  20% {
-      opacity: 1;
-      transform: translateY(-60%);
+  30% {
+    opacity: 0;              /* Scanline disappears */
+    transform: translateY(0); /* Stay in the same position */
   }
-  40% {
-      opacity: 1;
-      transform: translateY(50%);
+  50% {
+    opacity: 0;              /* Scanline still invisible */
+    transform: translateY(calc(100% * var(--random-position))); /* Random position */
   }
-  60% {
-      opacity: 0;
-      transform: translateY(-20%);
-  }
-  80% {
-      opacity: 1;
-      transform: translateY(20%);
+  70% {
+    opacity: 0;              /* Scanline still invisible */
+    transform: translateY(calc(100% * var(--random-position))); /* Keep at random position */
   }
   100% {
-      opacity: 0;
-      transform: translateY(0);
+    opacity: 1;              /* Scanline reappears */
+    transform: translateY(0); /* Scanline returns to initial position */
   }
 }
 

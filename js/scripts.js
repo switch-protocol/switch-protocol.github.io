@@ -97,3 +97,13 @@ function restartAnimationOnHover(element) {
 
 // Add the mouseover event listeners for all h1, h2, and h3 elements
 document.querySelectorAll("h1").forEach(restartAnimationOnHover);
+
+document.querySelectorAll('.scanline-effect').forEach(function(container) {
+    container.addEventListener('mouseenter', function() {
+      // Generate a random value between 0 and 1 for the scanline's vertical position
+      const randomPosition = Math.random();
+  
+      // Set the custom property (--random-position) for the container
+      container.style.setProperty('--random-position', randomPosition);
+    });
+  });
