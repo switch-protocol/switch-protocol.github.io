@@ -26,9 +26,14 @@ function animateText(target, duration = 1500, intervalTime = 35, charTurns = 5) 
             return `<span>${letters[Math.floor(Math.random() * letters.length)]}</span>`;
         }).join("");
 
-        // If all letters are revealed, clear the interval
+        // If all letters are revealed, clear the interval and make text a hyperlink
         if (iteration >= targetText.length) {
             clearInterval(interval);
+
+            // Wrap text in a link if a URL is provided in the data-url attribute
+            if (target.dataset.url) {
+                target.innerHTML = `<a href="${target.dataset.url}" target="_blank">${targetText}</a>`;
+            }
         }
 
         // Increase iteration as time progresses
@@ -40,7 +45,7 @@ function animateText(target, duration = 1500, intervalTime = 35, charTurns = 5) 
     return interval;  // Return the interval ID
 }
 
-// Start animations for all h1 elements on page load
+// Start animations for all h1, h2, and h3 elements on page load
 window.onload = function () {
     const h1Elements = document.querySelectorAll("h1");
     h1Elements.forEach((h1) => {
