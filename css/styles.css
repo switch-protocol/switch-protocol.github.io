@@ -31,6 +31,7 @@
 
   h1 a:hover, h2 a:hover, h3 a:hover {
     color: rgb(255, 80, 80);   /* Change text color on hover */
+    background-color: white; 
     text-decoration: none;       /* Ensure no underline on hover */
   }
 
@@ -57,7 +58,7 @@
     border-radius: clamp(0.4rem, 0.75vw, 1rem);
     margin: 0;             /* Remove any default margins */
     padding: 0;            /* Remove any default padding */
-    line-height: 1.05;      /* Adjust line-height to reduce vertical space */
+    line-height: 1.1;      /* Adjust line-height to reduce vertical space */
   }
   
   h1 {
