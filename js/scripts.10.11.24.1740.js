@@ -2,7 +2,7 @@
 const links = {
     artist_one_social: "https://soundcloud.com/keefemusic",
     artist_two_social: "https://soundcloud.com/nathaniel_pavel",
-    artist_three_social: "https://soundcloud.com/mikext",
+    artist_three_social: "https://soundcloud.com/mikeext",
     // artist_one_sound: "https://soundcloud.com/keefemusic",
     // artist_two_sound: "https://soundcloud.com/nathaniel_pavel",
     // artist_three_sound: "https://soundcloud.com/mikeext",
