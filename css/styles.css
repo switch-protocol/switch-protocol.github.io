@@ -195,11 +195,11 @@
         width: 100%;
       }
       h2 {
-          font-size: 14px;
+          font-size: 18px;
           width: 100%;  /* Adjust heading size for mobile */
         }
       h3 {
-      font-size: 8px;
+      font-size: 14px;
       width: 100%;  /* Adjust heading size for mobile */
       }
   }
@@ -212,11 +212,11 @@
       width: 100%;  /* Adjust heading size for mobile */
     }
     h2 {
-        font-size: 14px;
+        font-size: 18px;
         width: 100%;  /* Adjust heading size for mobile */
       }
     h3 {
-    font-size: 8px;
+    font-size: 14px;
     width: 100%;  /* Adjust heading size for mobile */
     }
   }
