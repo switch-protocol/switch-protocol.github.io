@@ -191,15 +191,15 @@
   /* For tablets (width up to 768px) */
 @media (max-width: 768px) {
     h1 {
-        font-size: 28px;  /* Adjust heading size for mobile */
+        font-size: 30px;  /* Adjust heading size for mobile */
         width: 100%;
       }
       h2 {
-          font-size: 18px;
+          font-size: 20px;
           width: 100%;  /* Adjust heading size for mobile */
         }
       h3 {
-      font-size: 14px;
+      font-size: 12px;
       width: 100%;  /* Adjust heading size for mobile */
       }
   }
@@ -208,15 +208,15 @@
   @media (max-width: 480px) {
   
     h1 {
-      font-size: 28px;
+      font-size: 30px;
       width: 100%;  /* Adjust heading size for mobile */
     }
     h2 {
-        font-size: 18px;
+        font-size: 20px;
         width: 100%;  /* Adjust heading size for mobile */
       }
     h3 {
-    font-size: 14px;
+    font-size: 12px;
     width: 100%;  /* Adjust heading size for mobile */
     }
   }
