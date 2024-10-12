@@ -191,7 +191,7 @@
   /* For tablets (width up to 768px) */
 @media (max-width: 768px) {
     h1 {
-        font-size: 30px;  /* Adjust heading size for mobile */
+        font-size: 28px;  /* Adjust heading size for mobile */
         width: 100%;
       }
       h2 {
@@ -208,7 +208,7 @@
   @media (max-width: 480px) {
   
     h1 {
-      font-size: 30px;
+      font-size: 28px;
       width: 100%;  /* Adjust heading size for mobile */
     }
     h2 {
