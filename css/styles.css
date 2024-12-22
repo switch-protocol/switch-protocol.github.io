@@ -1,5 +1,5 @@
   body {
-    background-image: url('/images/a-microbiology-03-v.jpg');  /* Specify the image path */
+    background-image: url('../images/sp122224.jpg');  /* Specify the image path */
     background-size: cover;  /* Makes sure the image fits without stretching */
     background-position: center;  /* Centers the image within the body */
     background-repeat: no-repeat;  /* Prevents the image from repeating */
@@ -24,25 +24,26 @@
     text-decoration: none;  /* Remove the underline from links */
     display: inline-block;  /* Ensure the link only takes up the space of the text */
     position: relative;
+    cursor: default;
 }
 
   h1:hover {
+  
     background-color: white;     /* Change background on hover */
     color: black;           
     text-decoration: none;       /* Ensure no underline on hover */
   }
 
-  h2:hover, h3:hover {
-    color: rgb(255, 80, 80);      
-    text-decoration: none;       /* Ensure no underline on hover */
-    animation: flashThreeTimes 0.25s forwards;
-  }
-
-  /* Add ">" when hovering over h2 and h3*/
-  h2:hover::before, h3:hover::before {
-    content: ">";          /* The character to insert */
-    position: relative;     /* Position it to the left of the text */
-    color: rgb(255, 80, 80);        /* Customize the color */
+ /* Add ">" when hovering over h2 and h3*/
+ h2:hover::before, h3:hover::before {
+  content: ">";          /* The character to insert */
+  left: -0.25em;
+  position: relative;     /* Position it to the left of the text */
+  color: rgb(255, 80, 80);        /* Customize the color */
+  text-shadow: inherit;
+  letter-spacing: 0em;
+  animation: 
+    flashThreeTimes 0.25s forwards;
 }
 
 
@@ -71,6 +72,9 @@
     border-radius: clamp(0.4rem, 0.75vw, 1rem);
     font-size: clamp(3rem, 10vw, 10rem);
     text-align: center;
+    text-indent: 0.5rem;
+    margin-bottom: 0.5rem;  /* Reduced margin */
+    letter-spacing: 0.1em;
   }
 
   h2 {
@@ -80,7 +84,9 @@
     text-align: left;
     position: left;
     width: 75%;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.5rem;  /* Reduced margin */
+    text-indent: 1rem;
+    letter-spacing: 0.3em;
   }
 
   h3 {
@@ -91,13 +97,49 @@
     width: 50%;
     margin-bottom: 0.3rem;
     border-radius: clamp(0.2rem, 0.375vw, 0.5rem);
+    text-indent: 1rem;
+    letter-spacing: 0.5em;
+  }
+
+  /* Make sure spans in h3 match the new spacing */
+  h3 span {
+    letter-spacing: 0.5em;
   }
 
   .match {
     background-color: white;
     color: rgb(255, 80, 80);
-    height: 10rem;
- 
+    display: inline;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    letter-spacing: inherit;
+  }
+
+  /* Update these sections */
+  /* Control all spans in h1 */
+  h1 span {
+    display: inline;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.1em;  /* Match h1 spacing */
+  }
+
+  h2 span {
+    display: inline;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.3em;  /* Match h2 spacing */
+  }
+
+  h3 span {
+    display: inline;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.5em;  /* Match h3 spacing */
   }
 
   .viewport-image {
@@ -111,6 +153,19 @@
 .link {
   text-decoration: none;
   color: inherit; /* Inherit color from parent */
+  margin-left: auto;
+  position: right;
+}
+
+.link img {
+  width: 4vw;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+  float: left;
+  margin-right: 1rem;
+  padding: 5px;
+  transition: background-color 0.3s ease;
 }
 
 .link:hover {
@@ -118,34 +173,16 @@
   cursor: pointer; /* Optional: gives a pointer on hover */
 }
 
-/* Base styling for scanline-effect */
-.scanline-effect {
-  position: relative; /* To allow scanline positioning */
-  display: inline-block; /* Keeps it inline with text */
-  width: auto; /* Let the width be determined by the content */
-  height: auto;
-  white-space: nowrap; /* Prevent text from wrapping */
-  overflow: hidden; /* Hide any overflow */
-  cursor: pointer; /* Optional: gives a pointer on hover */
+.viewport-image {
+  width: 4vw;   /* 50% of the viewport width */
+  height: auto;  /* Keep aspect ratio */
+  border-radius: 5px;  /* Adjust this value for rounded corners */
+  object-fit: cover;  /* Ensures image is cropped appropriately */
 }
 
-/* Scanline styling */
-.scanline-effect::after {
-  content: "";              /* Empty content for the pseudo-element */
-  position: absolute;       /* To overlay the element */
-  top: 0; left: 0;          /* Start at the top-left of the container */
-  width: 100%;              /* Full width of the container */
-  height: 2px;              /* The height of the scanline */
-  background: rgba(0, 0, 0, 0.5); /* Color and opacity of the scanline */
-  opacity: 0;               /* Make it invisible initially */
-  pointer-events: none;     /* Prevent the overlay from blocking interaction */
-  transition: opacity 0.2s ease, transform 0.2s ease; /* Quick fade-in/fade-out */
-}
-
-/* When the element is hovered, apply the flicker/move animation */
-.scanline-effect:hover::after {
-  opacity: 1;               /* Make the scanline visible on hover */
-  animation: flickerMoveAnimation s infinite; /* Animation for flicker and movement */
+.viewport-image:hover {
+  background-color: white;  /* White background on hover */
+  cursor: pointer;
 }
 
 /* Keyframes for flicker/move animation */
@@ -188,18 +225,20 @@
   }
 }
 
-  /* For tablets (width up to 768px) */
+/* Control spacing of animated spans */
+
+/* For tablets (width up to 768px) */
 @media (max-width: 768px) {
     h1 {
-        font-size: 28px;  /* Adjust heading size for mobile */
+        font-size: 32px;  /* Adjust heading size for mobile */
         width: 100%;
       }
       h2 {
-          font-size: 20px;
+          font-size: 24px;
           width: 100%;  /* Adjust heading size for mobile */
         }
       h3 {
-      font-size: 12px;
+      font-size: 16px;
       width: 100%;  /* Adjust heading size for mobile */
       }
   }
@@ -208,15 +247,15 @@
   @media (max-width: 480px) {
   
     h1 {
-      font-size: 28px;
+      font-size: 32px;
       width: 100%;  /* Adjust heading size for mobile */
     }
     h2 {
-        font-size: 20px;
+        font-size: 24px;
         width: 100%;  /* Adjust heading size for mobile */
       }
     h3 {
-    font-size: 12px;
+    font-size: 16px;
     width: 100%;  /* Adjust heading size for mobile */
     }
   }
