@@ -256,21 +256,41 @@
 }
 
 /* For mobile devices (width up to 480px) */
-@media (max-width: 767px) {
+@media (max-width: 480px) {
+    body {
+        padding: 1rem 1rem;  /* Reduce padding on mobile */
+    }
+
     h1 {
         font-size: 1.5em;
-        width: 100%;
-        letter-spacing: 0.01em;  /* Minimal letter spacing */
+        width: 100%;         /* Full width */
+        letter-spacing: 0.01em;
+        text-align: center;
+        margin: 0 auto;      /* Center the element */
+        padding: 0;
     }
+
     h2 {
         font-size: 1.25em;
-        width: 100%;
-        letter-spacing: 0.01em;  /* Minimal letter spacing */
+        width: 100%;         /* Full width instead of 75% */
+        letter-spacing: 0.01em;
+        text-indent: 0;      /* Remove indent on mobile */
+        margin: 0 auto;      /* Center the element */
+        padding: 0;
     }
+
     h3 {
         font-size: 1.0em;
-        width: 100%;
-        letter-spacing: 0.01em;  /* Minimal letter spacing */
+        width: 100%;         /* Full width instead of 50% */
+        letter-spacing: 0.01em;
+        text-indent: 0;      /* Remove indent on mobile */
+        margin: 0 auto;      /* Center the element */
+        padding: 0;
+    }
+
+    /* Update viewport image size for mobile */
+    .viewport-image {
+        width: 8vw;          /* Make icons slightly larger on mobile */
     }
 
     /* Update spans for mobile */
