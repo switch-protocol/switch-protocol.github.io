@@ -262,7 +262,7 @@
     }
 
     h1 {
-        font-size: 8vw;  /* Dynamic font size based on viewport width */
+        font-size: 6vw;  /* Dynamic font size based on viewport width */
         width: 100%;
         letter-spacing: 0.01em;
         text-align: center;
@@ -276,11 +276,11 @@
         overflow: hidden;
         box-sizing: border-box;
         padding: 0.5rem;
-        line-height: 1.2;  /* Add line height */
+        line-height: 1.2;
     }
 
     h2 {
-        font-size: 4.5vw;  /* Keep current h2 size */
+        font-size: 5vw;  /* Increased from 2vw */
         width: 100%;
         letter-spacing: 0.01em;
         text-indent: 0.1;
@@ -292,27 +292,22 @@
         padding: 0.5rem;
         overflow: hidden;
         box-sizing: border-box;
-        line-height: 1.2;  /* Increase line height */
+        line-height: 1.2;
     }
 
     h3 {
-        font-size: 3vw;  /* Dynamic font size based on viewport width */
+        font-size: 3.5vw;  /* Increased from 2vw */
         width: 100%;
         letter-spacing: 0.01em;
         text-indent: 0.1;
         margin: 0 auto;
         margin-bottom: 0.5rem;
-        padding: 0.5rem;  /* Add padding */
-        display: flex;  /* Add flex */
+        padding: 0.5rem;
+        display: flex;
         align-items: center;
         overflow: hidden;
         box-sizing: border-box;
-        line-height: 1.2;  /* Add line height */
-    }
-
-    /* Update viewport image size for mobile */
-    .viewport-image {
-        width: 8vw;          /* Make icons slightly larger on mobile */
+        line-height: 1.2;
     }
 
     /* Update spans for mobile */
