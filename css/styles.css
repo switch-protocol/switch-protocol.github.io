@@ -258,7 +258,7 @@
 /* For mobile devices (width up to 480px) */
 @media (max-width: 480px) {
     body {
-        padding: 1rem 1rem;  /* Reduce padding on mobile */
+        padding: 1rem 1rem;
     }
 
     h1 {
@@ -267,8 +267,12 @@
         letter-spacing: 0.01em;
         text-align: center;
         margin: 0 auto;
-        margin-bottom: 1rem;  /* Add space after h1 */
-        padding: 0;
+        margin-bottom: 1rem;
+        padding: 1.5rem 0;  /* Add vertical padding to make container taller */
+        min-height: 4rem;  /* Ensure minimum height */
+        display: flex;     /* Use flexbox for vertical centering */
+        align-items: center;  /* Center content vertically */
+        justify-content: center;  /* Center content horizontally */
     }
 
     h2 {
