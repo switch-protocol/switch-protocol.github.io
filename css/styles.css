@@ -275,6 +275,7 @@
         justify-content: center;
         overflow: hidden;  /* Prevent text overflow */
         box-sizing: border-box;  /* Include padding in width calculation */
+        padding: 1rem;  /* Add padding all around */
     }
 
     h2 {
@@ -284,19 +285,19 @@
         text-indent: 0.5;
         margin: 0 auto;
         margin-bottom: 0.5rem;
-        min-height: 2rem;
+        min-height: 3rem;  /* Increased from 2rem */
         display: flex;
         align-items: center;
-        padding: 0.5rem;  /* Add some padding */
-        overflow: hidden;  /* Prevent text overflow */
-        box-sizing: border-box;  /* Include padding in width calculation */
+        padding: 1rem;  /* Increased padding */
+        overflow: hidden;
+        box-sizing: border-box;
     }
 
     h3 {
         font-size: 1.0em;
         width: 100%;
         letter-spacing: 0.01em;
-        text-indent: 0.5;
+        text-indent: 0.25;
         margin: 0 auto;
         margin-bottom: 0.5rem;  /* Add space between h3s */
         padding: 0;
