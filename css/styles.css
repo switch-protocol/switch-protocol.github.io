@@ -263,28 +263,31 @@
 
     h1 {
         font-size: 1.5em;
-        width: 100%;         /* Full width */
+        width: 100%;
         letter-spacing: 0.01em;
         text-align: center;
-        margin: 0 auto;      /* Center the element */
+        margin: 0 auto;
+        margin-bottom: 1rem;  /* Add space after h1 */
         padding: 0;
     }
 
     h2 {
         font-size: 1.25em;
-        width: 100%;         /* Full width instead of 75% */
+        width: 100%;
         letter-spacing: 0.01em;
-        text-indent: 0;      /* Remove indent on mobile */
-        margin: 0 auto;      /* Center the element */
+        text-indent: 0;
+        margin: 0 auto;
+        margin-bottom: 0.5rem;  /* Add space between h2s */
         padding: 0;
     }
 
     h3 {
         font-size: 1.0em;
-        width: 100%;         /* Full width instead of 50% */
+        width: 100%;
         letter-spacing: 0.01em;
-        text-indent: 0;      /* Remove indent on mobile */
-        margin: 0 auto;      /* Center the element */
+        text-indent: 0;
+        margin: 0 auto;
+        margin-bottom: 0.5rem;  /* Add space between h3s */
         padding: 0;
     }
 
