@@ -230,7 +230,7 @@
 /* For tablets (width up to 768px) */
 @media (max-width: 768px) {
     h1 {
-        font-size: 32px;
+        font-size: 1.5em;
         width: 100%;
         letter-spacing: 0.05em;  /* Reduced letter spacing */
     }
@@ -258,19 +258,19 @@
 /* For mobile devices (width up to 480px) */
 @media (max-width: 480px) {
     h1 {
-        font-size: 24px;
+        font-size: 1.5em;
         width: 100%;
         letter-spacing: 0.01em;  /* Minimal letter spacing */
     }
     h2 {
-        font-size: 20px;
+        font-size: 1.25em;
         width: 100%;
-        letter-spacing: 0.025em;  /* Minimal letter spacing */
+        letter-spacing: 0.01em;  /* Minimal letter spacing */
     }
     h3 {
-        font-size: 12px;
+        font-size: 1.0em;
         width: 100%;
-        letter-spacing: 0.025em;  /* Minimal letter spacing */
+        letter-spacing: 0.01em;  /* Minimal letter spacing */
     }
 
     /* Update spans for mobile */
