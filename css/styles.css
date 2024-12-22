@@ -269,23 +269,27 @@
         margin: 0 auto;
         margin-bottom: 1rem;
         padding: 1.0 rem 0;  /* Add vertical padding to make container taller */
-        min-height: 3rem;  /* Ensure minimum height */
-        display: flex;     /* Use flexbox for vertical centering */
-        align-items: center;  /* Center content vertically */
-        justify-content: center;  /* Center content horizontally */
+        min-height: 4rem;  /* Increased from 3rem */
+        display: flex;     
+        align-items: center;  
+        justify-content: center;
+        overflow: hidden;  /* Prevent text overflow */
+        box-sizing: border-box;  /* Include padding in width calculation */
     }
 
     h2 {
-        font-size: 1.5em;
+        font-size: 1.25em;  /* Reduced from 1.5em */
         width: 100%;
         letter-spacing: 0.01em;
         text-indent: 0.5;
         margin: 0 auto;
-        margin-bottom: 0.5rem;  /* Space between h2s */
-        min-height: 2rem;      /* Minimum height */
-        display: flex;         /* Use flexbox for centering */
-        align-items: center;   /* Center vertically */
-        padding: 0;
+        margin-bottom: 0.5rem;
+        min-height: 2rem;
+        display: flex;
+        align-items: center;
+        padding: 0.5rem;  /* Add some padding */
+        overflow: hidden;  /* Prevent text overflow */
+        box-sizing: border-box;  /* Include padding in width calculation */
     }
 
     h3 {
