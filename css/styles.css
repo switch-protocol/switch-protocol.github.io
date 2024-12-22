@@ -230,35 +230,58 @@
 /* For tablets (width up to 768px) */
 @media (max-width: 768px) {
     h1 {
-        font-size: 32px;  /* Adjust heading size for mobile */
+        font-size: 32px;
         width: 100%;
-      }
-      h2 {
-          font-size: 24px;
-          width: 100%;  /* Adjust heading size for mobile */
-        }
-      h3 {
-      font-size: 16px;
-      width: 100%;  /* Adjust heading size for mobile */
-      }
-  }
-  
-  /* For mobile devices (width up to 480px) */
-  @media (max-width: 480px) {
-  
-    h1 {
-      font-size: 32px;
-      width: 100%;  /* Adjust heading size for mobile */
+        letter-spacing: 0.05em;  /* Reduced letter spacing */
     }
     h2 {
         font-size: 24px;
-        width: 100%;  /* Adjust heading size for mobile */
-      }
-    h3 {
-    font-size: 16px;
-    width: 100%;  /* Adjust heading size for mobile */
+        width: 100%;
+        letter-spacing: 0.1em;  /* Reduced letter spacing */
     }
-  }
+    h3 {
+        font-size: 16px;
+        width: 100%;
+        letter-spacing: 0.1em;  /* Reduced letter spacing */
+    }
+
+    /* Update spans for mobile */
+    h1 span, h2 span, h3 span {
+        letter-spacing: inherit;
+    }
+
+    .match {
+        letter-spacing: inherit;
+    }
+}
+
+/* For mobile devices (width up to 480px) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 28px;
+        width: 100%;
+        letter-spacing: 0.02em;  /* Minimal letter spacing */
+    }
+    h2 {
+        font-size: 20px;
+        width: 100%;
+        letter-spacing: 0.05em;  /* Minimal letter spacing */
+    }
+    h3 {
+        font-size: 14px;
+        width: 100%;
+        letter-spacing: 0.05em;  /* Minimal letter spacing */
+    }
+
+    /* Update spans for mobile */
+    h1 span, h2 span, h3 span {
+        letter-spacing: inherit;
+    }
+
+    .match {
+        letter-spacing: inherit;
+    }
+}
   
   
 
