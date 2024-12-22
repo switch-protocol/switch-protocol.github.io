@@ -268,8 +268,8 @@
         text-align: center;
         margin: 0 auto;
         margin-bottom: 1rem;
-        padding: 1.5rem 0;  /* Add vertical padding to make container taller */
-        min-height: 4rem;  /* Ensure minimum height */
+        padding: 1.0 rem 0;  /* Add vertical padding to make container taller */
+        min-height: 3rem;  /* Ensure minimum height */
         display: flex;     /* Use flexbox for vertical centering */
         align-items: center;  /* Center content vertically */
         justify-content: center;  /* Center content horizontally */
@@ -282,6 +282,8 @@
         text-indent: 0;
         margin: 0 auto;
         margin-bottom: 0.5rem;  /* Add space between h2s */
+        padding: 0.5 rem 0;  /* Add vertical padding to make container taller */
+        min-height: 3rem;  /* Ensure minimum height */
         padding: 0;
     }
 
