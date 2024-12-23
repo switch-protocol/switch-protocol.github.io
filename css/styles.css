@@ -365,6 +365,20 @@ h3 {
         font-size: 3.0vw;
         /* ... other h3 styles ... */
     }
+
+    /* Override ALL letter-spacing at the end of the media query */
+    h1, h2, h3,
+    h1 *, h2 *, h3 *,
+    .match,
+    span,
+    h1 span,
+    h2 span,
+    h3 span {
+        letter-spacing: 0 !important;
+        -webkit-letter-spacing: 0 !important;
+        -moz-letter-spacing: 0 !important;
+        -ms-letter-spacing: 0 !important;
+    }
 }
   
   
