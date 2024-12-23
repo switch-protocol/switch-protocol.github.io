@@ -295,6 +295,7 @@ h3 span {
 @media (max-width: 480px) {
     body {
         padding: 1rem 1rem;
+        letter-spacing: 0.025em; 
     }
 
     h1 {
