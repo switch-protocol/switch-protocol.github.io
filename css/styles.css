@@ -312,7 +312,6 @@ h3 {
         justify-content: center;
         overflow: hidden;
         box-sizing: border-box;
-        padding: 0.5rem;
     }
     
     h2 {
@@ -340,6 +339,32 @@ h3 {
         box-sizing: border-box;
     }
 
+    h1, h2, h3 {
+        letter-spacing: 0 !important;  /* Reset letter spacing for all headings */
+    }
+
+    h1 span, h2 span, h3 span {
+        letter-spacing: 0 !important;  /* Reset letter spacing for all spans */
+    }
+
+    .match {
+        letter-spacing: 0 !important;  /* Reset letter spacing for match class */
+    }
+
+    h1 {
+        font-size: 6vw;
+        /* ... other h1 styles ... */
+    }
+
+    h2 {
+        font-size: 4.0vw;
+        /* ... other h2 styles ... */
+    }
+
+    h3 {
+        font-size: 3.0vw;
+        /* ... other h3 styles ... */
+    }
 }
   
   
