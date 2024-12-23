@@ -255,6 +255,7 @@ h1 {
     justify-content: center;
     overflow: hidden;
     box-sizing: border-box;
+    letter-spacing: 0;
 }
 
 h2 {
@@ -304,13 +305,10 @@ h3 {
     h2 {
         font-size: 4.0vw;
         width: 100%;
-        margin: 0 auto;
-        margin-bottom: 0.25rem;
+
         display: inline-block;  /* Changed from flex */
         text-align: left;      /* Ensure text alignment */
-        padding: 0.25rem;
-        white-space: normal;   /* Allow normal text wrapping */
-        word-spacing: normal;  /* Normal word spacing */
+
     }
     
     h3 {
@@ -318,7 +316,6 @@ h3 {
         width: 100%;
         margin: 0 auto;
         margin-bottom: 0.25rem;
-        padding: 0.25rem;
         display: inline-block;  /* Changed from flex */
         text-align: left;      /* Ensure text alignment */
         white-space: normal;   /* Allow normal text wrapping */
