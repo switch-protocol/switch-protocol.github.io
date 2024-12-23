@@ -306,7 +306,7 @@ h3 {
         width: 100%;
         margin: 0 auto;
         margin-bottom: 0.25rem;
-        display: inline-block;  /* Changed from flex */
+        display: flex;  /* Changed from flex */
         text-align: left;      /* Ensure text alignment */
         padding: 0.25rem;
         white-space: normal;   /* Allow normal text wrapping */
