@@ -340,32 +340,6 @@ h3 {
         line-height: 1.2;
     }
 
-    h1, h2, h3 {
-        letter-spacing: 0 !important;  /* Reset letter spacing for all headings */
-    }
-
-    h1 span, h2 span, h3 span {
-        letter-spacing: 0 !important;  /* Reset letter spacing for all spans */
-    }
-
-    .match {
-        letter-spacing: 0 !important;  /* Reset letter spacing for match class */
-    }
-
-    h1 {
-        font-size: 6vw;
-        /* ... other h1 styles ... */
-    }
-
-    h2 {
-        font-size: 4.0vw;
-        /* ... other h2 styles ... */
-    }
-
-    h3 {
-        font-size: 3.0vw;
-        /* ... other h3 styles ... */
-    }
 
     /* Override ALL letter-spacing at the end of the media query */
     h1, h2, h3,
@@ -397,8 +371,7 @@ h3 {
     h2 span, h3 span {
         display: inline !important;
         letter-spacing: normal !important;
-        word-spacing: 0 !important;
-        margin: 0 !important;
+        word-spacing: normal !important;
     }
 
     /* Reset match class */
@@ -406,19 +379,19 @@ h3 {
         display: inline !important;
         letter-spacing: normal !important;
         word-spacing: normal !important;
-        margin: 0 !important;
+
     }
 
     /* Update spans for mobile */
     h2 span, h3 span {
         display: inline;
-        margin: 0;
+
     }
 
     .match {
         display: inline;
         letter-spacing: normal;  /* Use normal letter spacing */
-        margin: 0;
+
     }
 }
   
