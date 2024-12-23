@@ -384,8 +384,8 @@ h3 {
 
     h2, h3 {
         /* Reset all possible spacing properties */
-        letter-spacing: 0 !important;
-        word-spacing: 0 !important;
+        letter-spacing: normal !important;
+        word-spacing: normal !important;
         text-indent: 0 !important;
         padding: 0.25rem !important;
         margin: 0 auto !important;
@@ -398,7 +398,7 @@ h3 {
     /* Reset spans */
     h2 span, h3 span {
         display: inline !important;
-        letter-spacing: 0 !important;
+        letter-spacing: normal !important;
         word-spacing: 0 !important;
         margin: 0 !important;
         padding: 0 !important;
@@ -407,8 +407,8 @@ h3 {
     /* Reset match class */
     .match {
         display: inline !important;
-        letter-spacing: 0 !important;
-        word-spacing: 0 !important;
+        letter-spacing: normal !important;
+        word-spacing: normal !important;
         margin: 0 !important;
         padding: 0 !important;
     }
