@@ -253,7 +253,6 @@ h1 {
 h2 {
     font-size: 4.0vw;
     width: 100%;
-    text-indent: 0.1;
     margin: 0 auto;
     margin-bottom: 0.25rem;
     min-height: 3rem;
@@ -263,13 +262,11 @@ h2 {
     overflow: hidden;
     box-sizing: border-box;
     line-height: 1.2;
-    letter-spacing: 0.025em;  /* Reduced from 0.1em to 0.05em */
 }
 
 h3 {
     font-size: 3.0vw;
     width: 100%;
-    text-indent: 0.1;
     margin: 0 auto;
     margin-bottom: 0.25rem;
     padding: 0.25rem;
@@ -278,16 +275,6 @@ h3 {
     overflow: hidden;
     box-sizing: border-box;
     line-height: 1.2;
-    letter-spacing: 0.025em;  /* Reduced from 0.1em to 0.05em */
-}
-
-/* Update spans for mobile */
-h2 span {
-    letter-spacing: 0.025em;  /* Match h2 mobile spacing */
-}
-
-h3 span {
-    letter-spacing: 0.025em;  /* Match h3 mobile spacing */
 }
 }
 
@@ -295,7 +282,6 @@ h3 span {
 @media (max-width: 480px) {
     body {
         padding: 1rem 1rem;
-        letter-spacing: 0.025em; 
     }
 
     h1 {
