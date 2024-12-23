@@ -290,7 +290,7 @@ h3 {
     }
 
     h1 {
-        font-size: 5.0vw;
+        font-size: 6vw;
         width: 100%;
         text-align: center;
         margin: 0 auto;
@@ -306,7 +306,7 @@ h3 {
         width: 100%;
         margin: 0 auto;
         margin-bottom: 0.25rem;
-        display: flex;  /* Changed from flex */
+        display: inline-block;  /* Changed from flex */
         text-align: left;      /* Ensure text alignment */
         padding: 0.25rem;
         white-space: normal;   /* Allow normal text wrapping */
@@ -314,7 +314,7 @@ h3 {
     }
     
     h3 {
-        font-size: 2.5vw;
+        font-size: 2.0vw;
         width: 100%;
         margin: 0 auto;
         margin-bottom: 0.25rem;
