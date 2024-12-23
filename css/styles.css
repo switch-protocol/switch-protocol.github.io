@@ -279,7 +279,7 @@
     }
 
     h2 {
-        font-size: 3.0vw;  /* Reduced from 5vw */
+        font-size: 4.0vw;
         width: 100%;
         text-indent: 0.1;
         margin: 0 auto;
@@ -291,10 +291,11 @@
         overflow: hidden;
         box-sizing: border-box;
         line-height: 1.2;
+        letter-spacing: 0.1em;  /* Reduced from 0.3em */
     }
 
     h3 {
-        font-size: 2.5vw;  /* Reduced from 3.5vw */
+        font-size: 3.5vw;
         width: 100%;
         text-indent: 0.1;
         margin: 0 auto;
@@ -305,6 +306,16 @@
         overflow: hidden;
         box-sizing: border-box;
         line-height: 1.2;
+        letter-spacing: 0.1em;  /* Reduced from 0.5em */
+    }
+
+    /* Update spans for mobile */
+    h2 span {
+        letter-spacing: 0.1em;  /* Match h2 mobile spacing */
+    }
+
+    h3 span {
+        letter-spacing: 0.1em;  /* Match h3 mobile spacing */
     }
 }
   
