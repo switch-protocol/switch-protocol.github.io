@@ -285,7 +285,7 @@ h3 {
     }
 
     h1 {
-        font-size: 6vw;  /* Dynamic font size based on viewport width */
+        font-size: 6vw;
         width: 100%;
         text-align: center;
         margin: 0 auto;
@@ -299,6 +299,7 @@ h3 {
         box-sizing: border-box;
         padding: 0.5rem;
         line-height: 1.2;
+        letter-spacing: 0.01em;  /* Minimal letter spacing for mobile */
     }
 
     h2 {
@@ -313,6 +314,7 @@ h3 {
         overflow: hidden;
         box-sizing: border-box;
         line-height: 1.2;
+        letter-spacing: 0.01em;  /* Minimal letter spacing for mobile */
     }
 
     h3 {
@@ -326,6 +328,16 @@ h3 {
         overflow: hidden;
         box-sizing: border-box;
         line-height: 1.2;
+        letter-spacing: 0.01em;  /* Minimal letter spacing for mobile */
+    }
+
+    /* Update spans for mobile */
+    h1 span, h2 span, h3 span {
+        letter-spacing: 0.01em;  /* Match mobile spacing */
+    }
+
+    .match {
+        letter-spacing: 0.01em;  /* Match mobile spacing */
     }
 }
   
