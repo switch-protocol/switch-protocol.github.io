@@ -307,10 +307,11 @@ h3 {
         margin: 0 auto;
         margin-bottom: 0.25rem;
         min-height: 3rem;
-        display: flex;
-        align-items: center;
+        display: inline-block;  /* Changed from flex */
+        text-align: left;      /* Ensure text alignment */
         padding: 0.25rem;
-        letter-spacing: 0.05em;  /* Small amount of spacing */
+        white-space: normal;   /* Allow normal text wrapping */
+        word-spacing: normal;  /* Normal word spacing */
     }
     
     h3 {
@@ -319,14 +320,17 @@ h3 {
         margin: 0 auto;
         margin-bottom: 0.25rem;
         padding: 0.25rem;
-        display: flex;
-        align-items: center;
-        letter-spacing: 0.05em;  /* Small amount of spacing */
+        display: inline-block;  /* Changed from flex */
+        text-align: left;      /* Ensure text alignment */
+        white-space: normal;   /* Allow normal text wrapping */
+        word-spacing: normal;  /* Normal word spacing */
     }
 
-    /* Match span spacing */
-    h2 span, h3 span, .match {
-        letter-spacing: 0.05em;  /* Small amount of spacing */
+    /* Update spans for mobile */
+    h2 span, h3 span {
+        display: inline;       /* Changed from inline-block */
+        white-space: normal;   /* Allow normal text wrapping */
+        word-spacing: normal;  /* Normal word spacing */
     }
 }
   
