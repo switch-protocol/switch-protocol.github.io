@@ -325,7 +325,7 @@ h3 {
         padding: 0.25rem;
         overflow: hidden;
         box-sizing: border-box;
-        letter-spacing: normal;  /* Use normal letter spacing */
+        line-height: 1.2;
     }
     
     h3 {
@@ -338,7 +338,7 @@ h3 {
         align-items: center;
         overflow: hidden;
         box-sizing: border-box;
-        letter-spacing: normal;  /* Use normal letter spacing */
+        line-height: 1.2;
     }
 
     h1, h2, h3 {
@@ -416,7 +416,6 @@ h3 {
     /* Update spans for mobile */
     h2 span, h3 span {
         display: inline;
-        letter-spacing: normal;  /* Use normal letter spacing */
         margin: 0;
         padding: 0;
     }
