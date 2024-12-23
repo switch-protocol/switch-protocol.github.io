@@ -320,7 +320,7 @@ h3 {
     }
     
     h3 {
-        font-size: 2.25vw;
+        font-size: 2.35vw;
         width: 100%;
         margin-bottom: 0.25rem;
         display: inline-block;  /* Changed from flex */
