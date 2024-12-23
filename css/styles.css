@@ -255,7 +255,6 @@ h1 {
     justify-content: center;
     overflow: hidden;
     box-sizing: border-box;
-    padding: 0.5rem;
 }
 
 h2 {
@@ -387,7 +386,6 @@ h3 {
         letter-spacing: normal !important;
         word-spacing: normal !important;
         text-indent: 0 !important;
-        padding: 0.25rem !important;
         margin: 0 auto !important;
         margin-bottom: 0.25rem !important;
         white-space: normal !important;
@@ -399,9 +397,8 @@ h3 {
     h2 span, h3 span {
         display: inline !important;
         letter-spacing: normal !important;
-        word-spacing: 0 !important;
+        word-spacing: normal !important;
         margin: 0 !important;
-        padding: 0 !important;
     }
 
     /* Reset match class */
@@ -410,21 +407,18 @@ h3 {
         letter-spacing: normal !important;
         word-spacing: normal !important;
         margin: 0 !important;
-        padding: 0 !important;
     }
 
     /* Update spans for mobile */
     h2 span, h3 span {
         display: inline;
         margin: 0;
-        padding: 0;
     }
 
     .match {
         display: inline;
         letter-spacing: normal;  /* Use normal letter spacing */
         margin: 0;
-        padding: 0;
     }
 }
   
