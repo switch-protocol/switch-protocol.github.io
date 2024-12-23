@@ -379,6 +379,40 @@ h3 {
         -moz-letter-spacing: 0 !important;
         -ms-letter-spacing: 0 !important;
     }
+
+    h2, h3 {
+        /* Reset all possible spacing properties */
+        letter-spacing: 0 !important;
+        word-spacing: 0 !important;
+        text-indent: 0 !important;
+        padding: 0.25rem !important;
+        margin: 0 auto !important;
+        margin-bottom: 0.25rem !important;
+        white-space: normal !important;
+        text-rendering: optimizeLegibility !important;
+        font-kerning: none !important;
+        font-feature-settings: normal !important;
+    }
+
+    /* Reset spans */
+    h2 span, h3 span {
+        display: inline !important;
+        letter-spacing: 0 !important;
+        word-spacing: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        font-kerning: none !important;
+    }
+
+    /* Reset match class */
+    .match {
+        display: inline !important;
+        letter-spacing: 0 !important;
+        word-spacing: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        font-kerning: none !important;
+    }
 }
   
   
