@@ -385,7 +385,6 @@ h3 {
         /* Reset all possible spacing properties */
         letter-spacing: normal !important;
         word-spacing: normal !important;
-        text-indent: 0 !important;
         margin: 0 auto !important;
         margin-bottom: 0.25rem !important;
         white-space: normal !important;
