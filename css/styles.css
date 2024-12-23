@@ -310,7 +310,7 @@ h3 {
         display: flex;
         align-items: center;
         padding: 0.25rem;
-        letter-spacing: initial;  /* Reset to browser default */
+        letter-spacing: 0.05em;  /* Small amount of spacing */
     }
     
     h3 {
@@ -321,12 +321,12 @@ h3 {
         padding: 0.25rem;
         display: flex;
         align-items: center;
-        letter-spacing: initial;  /* Reset to browser default */
+        letter-spacing: 0.05em;  /* Small amount of spacing */
     }
 
-    /* Reset all spans to default spacing */
+    /* Match span spacing */
     h2 span, h3 span, .match {
-        letter-spacing: initial;  /* Reset to browser default */
+        letter-spacing: 0.05em;  /* Small amount of spacing */
     }
 }
   
