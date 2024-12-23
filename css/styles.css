@@ -279,15 +279,15 @@
     }
 
     h2 {
-        font-size: 3.5vw;  /* Reduced from 5vw */
+        font-size: 3.0vw;  /* Reduced from 5vw */
         width: 100%;
         text-indent: 0.1;
         margin: 0 auto;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.25rem;
         min-height: 3rem;
         display: flex;
         align-items: center;
-        padding: 0.5rem;
+        padding: 0.25rem;
         overflow: hidden;
         box-sizing: border-box;
         line-height: 1.2;
@@ -298,22 +298,13 @@
         width: 100%;
         text-indent: 0.1;
         margin: 0 auto;
-        margin-bottom: 0.5rem;
-        padding: 0.5rem;
+        margin-bottom: 0.25rem;
+        padding: 0.25rem;
         display: flex;
         align-items: center;
         overflow: hidden;
         box-sizing: border-box;
         line-height: 1.2;
-    }
-
-    /* Update spans for mobile */
-    h1 span, h2 span, h3 span {
-        letter-spacing: inherit;
-    }
-
-    .match {
-        letter-spacing: inherit;
     }
 }
   
