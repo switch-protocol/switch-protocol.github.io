@@ -289,28 +289,16 @@ h3 {
         padding: 1rem 1rem;
     }
 
-    h1, h2, h3 {
-      font-family: 'Space Mono', monospace;
-      background-color: black;
-      padding: 0rem clamp(1rem, 2vw, 3rem);
-      margin: 0;             /* Remove any default margins */
-      padding: 0;            /* Remove any default padding */
-      line-height: 1.1;      /* Adjust line-height to reduce vertical space */
-    }
-    
     h1 {
-        font-size: 6vw;  /* Dynamic font size based on viewport width */
+        font-size: 6vw;
         width: 100%;
         text-align: center;
         margin: 0 auto;
         margin-bottom: 1rem;
-        padding: 0.5 rem 0;
         min-height: 4rem;
         display: flex;     
         align-items: center;  
         justify-content: center;
-        overflow: hidden;
-        box-sizing: border-box;
     }
     
     h2 {
@@ -322,9 +310,7 @@ h3 {
         display: flex;
         align-items: center;
         padding: 0.25rem;
-        overflow: hidden;
-        box-sizing: border-box;
-        line-height: 1.2;
+        letter-spacing: initial;  /* Reset to browser default */
     }
     
     h3 {
@@ -335,63 +321,12 @@ h3 {
         padding: 0.25rem;
         display: flex;
         align-items: center;
-        overflow: hidden;
-        box-sizing: border-box;
-        line-height: 1.2;
+        letter-spacing: initial;  /* Reset to browser default */
     }
 
-
-    /* Override ALL letter-spacing at the end of the media query */
-    h1, h2, h3,
-    h1 *, h2 *, h3 *,
-    .match,
-    span,
-    h1 span,
-    h2 span,
-    h3 span {
-        letter-spacing: normal !important;
-        -webkit-letter-spacing: normal !important;
-        -moz-letter-spacing: normal !important;
-        -ms-letter-spacing: normal !important;
-    }
-
-    h2, h3 {
-        /* Reset all possible spacing properties */
-        letter-spacing: normal !important;
-        word-spacing: normal !important;
-        text-indent: 0.1rem !important;
-        margin: 0 auto !important;
-        margin-bottom: 0.25rem !important;
-        white-space: normal !important;
-        text-rendering: optimizeLegibility !important;
-        font-feature-settings: normal !important;
-    }
-
-    /* Reset spans */
-    h2 span, h3 span {
-        display: inline !important;
-        letter-spacing: normal !important;
-        word-spacing: normal !important;
-    }
-
-    /* Reset match class */
-    .match {
-        display: inline !important;
-        letter-spacing: normal !important;
-        word-spacing: normal !important;
-
-    }
-
-    /* Update spans for mobile */
-    h2 span, h3 span {
-        display: inline;
-
-    }
-
-    .match {
-        display: inline;
-        letter-spacing: normal;  /* Use normal letter spacing */
-
+    /* Reset all spans to default spacing */
+    h2 span, h3 span, .match {
+        letter-spacing: initial;  /* Reset to browser default */
     }
 }
   
