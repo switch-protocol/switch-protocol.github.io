@@ -314,7 +314,7 @@ h3 {
         overflow: hidden;
         box-sizing: border-box;
         line-height: 1.2;
-        letter-spacing: 0.01em;  /* Minimal letter spacing for mobile */
+        letter-spacing: normal !important;  /* Force normal letter spacing */
     }
 
     h3 {
@@ -328,7 +328,7 @@ h3 {
         overflow: hidden;
         box-sizing: border-box;
         line-height: 1.2;
-        letter-spacing: 0.01em;  /* Minimal letter spacing for mobile */
+        letter-spacing: normal !important;  /* Force normal letter spacing */
     }
 
     /* Update spans for mobile */
@@ -337,7 +337,12 @@ h3 {
     }
 
     .match {
-        letter-spacing: 0.01em;  /* Match mobile spacing */
+        letter-spacing: normal !important;  /* Force normal letter spacing */
+    }
+
+    /* Override span letter spacing in mobile */
+    h2 span, h3 span {
+        letter-spacing: normal !important;  /* Force normal letter spacing */
     }
 }
   
