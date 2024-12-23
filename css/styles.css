@@ -376,10 +376,10 @@ h3 {
     h1 span,
     h2 span,
     h3 span {
-        letter-spacing: 0 !important;
-        -webkit-letter-spacing: 0 !important;
-        -moz-letter-spacing: 0 !important;
-        -ms-letter-spacing: 0 !important;
+        letter-spacing: normal !important;
+        -webkit-letter-spacing: normal !important;
+        -moz-letter-spacing: normal !important;
+        -ms-letter-spacing: normal !important;
     }
 
     h2, h3 {
