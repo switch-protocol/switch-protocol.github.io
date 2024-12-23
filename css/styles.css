@@ -8,9 +8,11 @@
     height: 100vh;
     background-color: black;
     color: white;
-    margin: 0;
-    padding: 3rem 3rem;
+    padding: 3rem;
     overflow: hidden;
+    box-sizing: border-box;
+    max-width: 100vw;
+    margin: 0;
   }
 
   a {
@@ -57,78 +59,68 @@
     color: inherit;
     text-decoration: none;                 /* No color change when the link is active/clicked */
   }
-    
-  h1, h2, h3 {
+  
+  h1 {
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(3rem, 10vw, 10rem);
+    background-color: rgb(0, 0, 0);
+    margin: 0 -1.5rem;  /* Negative margin to counter body padding */
+    margin-bottom: 0.5rem;
+    width: 90%;
+    text-align: center;
+    color: white;
+    font-size: clamp(3rem, 10vw, 10rem);
+    line-height: 1.1;      /* Adjust line-height to reduce vertical space */
+  }
+  
+  
+  h2, h3 {
     font-family: 'Space Mono', monospace;
     background-color: black;
-    padding: 0rem clamp(1rem, 2vw, 3rem);
     margin: 0;             /* Remove any default margins */
     padding: 0;            /* Remove any default padding */
     line-height: 1.1;      /* Adjust line-height to reduce vertical space */
   }
   
-  h1 {
-    color: white;
-    border-radius: clamp(0.4rem, 0.75vw, 1rem);
-    font-size: clamp(3rem, 10vw, 10rem);
-    text-align: center;
-    text-indent: 0.5rem;
-    margin-bottom: 0.5rem;  /* Reduced margin */
-    letter-spacing: 0.1em;
-  }
 
   h2 {
-    color:rgb(148, 212, 255);
-    border-radius: clamp(0.4rem, 0.75vw, 1rem);
+    color: rgb(148, 212, 255);
     font-size: clamp(1rem, 5vw, 5rem);
     text-align: left;
     position: left;
     width: 75%;
-    margin-bottom: 0.5rem;  /* Reduced margin */
-    text-indent: 1rem;
+    margin: 0;
+    margin-bottom: 0.5rem;
     letter-spacing: 0.3em;
+    text-indent: 0.5rem;
+
   }
 
   h3 {
     color: rgb(158, 255, 146);
     font-size: clamp(0.125rem, 1.25vw, 1.25rem);
     text-align: left;
+    text-indent: 0.5rem;
     position: left;
     width: 50%;
-    margin-bottom: 0.3rem;
-    border-radius: clamp(0.2rem, 0.375vw, 0.5rem);
-    text-indent: 1rem;
-    letter-spacing: 0.5em;
-  }
-
-  /* Make sure spans in h3 match the new spacing */
-  h3 span {
-    letter-spacing: 0.5em;
-  }
-
-  .match {
-    background-color: white;
-    color: rgb(255, 80, 80);
-    display: inline;
-    position: relative;
     margin: 0;
-    padding: 0;
-    letter-spacing: inherit;
+    margin-bottom: 0.3rem;
+    letter-spacing: 0.5em;
   }
+
+
 
   /* Update these sections */
   /* Control all spans in h1 */
   h1 span {
     display: inline;
-    position: relative;
     margin: 0;
     padding: 0;
-    letter-spacing: 0.1em;  /* Match h1 spacing */
+    letter-spacing: 0.05em;  /* Match h2 spacing */
   }
 
   h2 span {
     display: inline;
-    position: relative;
     margin: 0;
     padding: 0;
     letter-spacing: 0.3em;  /* Match h2 spacing */
@@ -136,10 +128,19 @@
 
   h3 span {
     display: inline;
-    position: relative;
     margin: 0;
     padding: 0;
     letter-spacing: 0.5em;  /* Match h3 spacing */
+  }
+
+  
+  .match {
+    background-color: white;
+    color: rgb(255, 80, 80);
+    display: inline;
+    position: relative;
+    margin: 0;
+    padding: 0;
   }
 
   .viewport-image {
@@ -243,12 +244,11 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 6vw;  /* Dynamic font size based on viewport width */
+    font-size: 5vw;  /* Dynamic font size based on viewport width */
     width: 100%;
     text-align: center;
     margin: 0 auto;
     margin-bottom: 1rem;
-    padding: 0.5 rem 0;
     min-height: 4rem;
     display: flex;     
     align-items: center;  
@@ -256,6 +256,7 @@ h1 {
     overflow: hidden;
     box-sizing: border-box;
     letter-spacing: 0;
+    margin: 0 -1.5rem;  /* Negative margin to counter body padding */
 }
 
 h2 {
@@ -286,49 +287,83 @@ h3 {
 
 /* For mobile devices (width up to 480px) */
 @media (max-width: 480px) {
-    body {
-        padding: 1rem 1rem;
-    }
 
-    h1 {
-        font-size: 6vw;
-        width: 100%;
-        text-align: center;
-        margin: 0 auto;
-        margin-bottom: 1rem;
-        min-height: 4rem;
-        display: flex;     
-        align-items: center;  
-        justify-content: center;
-    }
-    
+  body {
+    height: 100vh;
+    background-color: black;
+    color: white;
+    padding: 0.5rem;
+    max-width: 100vw;
+    margin: 0;
+  }
+
+  h1 {
+      font-size: 6.0vw;
+      width: 100%;
+      margin-bottom: 0.25rem;
+      line-height: 3.0rem;  /* Use line-height for vertical centering */
+      background-color: black;
+      min-height: 3.0rem;  /* Match the line-height */
+      margin: 0;
+    } 
+
     h2 {
-        font-size: 4.0vw;
+        font-size: 5.0vw;
         width: 100%;
-
-        display: inline-block;  /* Changed from flex */
-        text-align: left;      /* Ensure text alignment */
-
+        display: inline-block;  /* Keep as block */
+        text-align: left;
+        margin-bottom: 0.25rem;
+        line-height: 1.5rem;  /* Use line-height for vertical centering */
+        background-color: rgb(0, 0, 0);
+        min-height: 1.5rem;  /* Match the line-height */
+        margin: 0;
     }
     
     h3 {
-        font-size: 2.0vw;
+        font-size: 2.25vw;
         width: 100%;
-        margin: 0 auto;
         margin-bottom: 0.25rem;
         display: inline-block;  /* Changed from flex */
         text-align: left;      /* Ensure text alignment */
-        white-space: normal;   /* Allow normal text wrapping */
-        word-spacing: normal;  /* Normal word spacing */
+        line-height: 1.0rem;  /* Use line-height for vertical centering */
+        background-color: rgb(0, 0, 0);
+        min-height: 1.0rem;  /* Match the line-height */
+        margin: 0;
     }
 
-    /* Update spans for mobile */
-    h2 span, h3 span {
-        display: inline;       /* Changed from inline-block */
-        white-space: normal;   /* Allow normal text wrapping */
-        word-spacing: normal;  /* Normal word spacing */
+    .match {
+      background-color: white;
+      color: rgb(255, 80, 80);
+      display: inline;
+      position: relative;
+      margin: 0;
+      text-align: center;
     }
+
+    h1 span {
+      display: inline;
+      position: relative;
+      text-align: center;
+      margin: 0;
+
+      letter-spacing: 0.3em;  /* Match h1 spacing */
+    }
+  
+    h2 span {
+      display: inline;
+      position: relative;
+      margin: 0;
+
+      letter-spacing: 0.3em;  /* Match h2 spacing */
+    }
+  
+    h3 span {
+      display: inline;
+      position: relative;
+      margin: 0;
+
+      letter-spacing: 0.5em;  /* Match h3 spacing */
+    }
+
 }
   
-  
-

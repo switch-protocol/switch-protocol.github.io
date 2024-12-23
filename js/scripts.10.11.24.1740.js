@@ -63,12 +63,12 @@ function animateText(target, duration = 1500, intervalTime = 35, charTurns = 5) 
 window.onload = function () {
     const h1Elements = document.querySelectorAll("h1");
     h1Elements.forEach((h1) => {
-        intervals[h1.dataset.value] = animateText(h1, 1000, 35, 4);
+        intervals[h1.dataset.value] = animateText(h1, 1000, 35, 3);
     });
 
     const h2Elements = document.querySelectorAll("h2");
     h2Elements.forEach((h2) => {
-        intervals[h2.dataset.value] = animateText(h2, 2500, 35, 3);
+        intervals[h2.dataset.value] = animateText(h2, 2500, 35, 2.5);
     });
 
     const h3Elements = document.querySelectorAll("h3");
