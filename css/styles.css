@@ -229,30 +229,66 @@
 
 /* For tablets (width up to 768px) */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 1.5em;
-        width: 100%;
-        letter-spacing: 0.05em;  /* Reduced letter spacing */
-    }
-    h2 {
-        font-size: 24px;
-        width: 100%;
-        letter-spacing: 0.1em;  /* Reduced letter spacing */
-    }
-    h3 {
-        font-size: 16px;
-        width: 100%;
-        letter-spacing: 0.1em;  /* Reduced letter spacing */
-    }
+  body {
+    padding: 1rem 1rem;
+}
 
-    /* Update spans for mobile */
-    h1 span, h2 span, h3 span {
-        letter-spacing: inherit;
-    }
+h1 {
+    font-size: 6vw;  /* Dynamic font size based on viewport width */
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    padding: 0.5 rem 0;
+    min-height: 4rem;
+    display: flex;     
+    align-items: center;  
+    justify-content: center;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    line-height: 1.2;
+}
 
-    .match {
-        letter-spacing: inherit;
-    }
+h2 {
+    font-size: 4.0vw;
+    width: 100%;
+    text-indent: 0.1;
+    margin: 0 auto;
+    margin-bottom: 0.25rem;
+    min-height: 3rem;
+    display: flex;
+    align-items: center;
+    padding: 0.25rem;
+    overflow: hidden;
+    box-sizing: border-box;
+    line-height: 1.2;
+    letter-spacing: 0.025em;  /* Reduced from 0.1em to 0.05em */
+}
+
+h3 {
+    font-size: 3.0vw;
+    width: 100%;
+    text-indent: 0.1;
+    margin: 0 auto;
+    margin-bottom: 0.25rem;
+    padding: 0.25rem;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    box-sizing: border-box;
+    line-height: 1.2;
+    letter-spacing: 0.025em;  /* Reduced from 0.1em to 0.05em */
+}
+
+/* Update spans for mobile */
+h2 span {
+    letter-spacing: 0.025em;  /* Match h2 mobile spacing */
+}
+
+h3 span {
+    letter-spacing: 0.025em;  /* Match h3 mobile spacing */
+}
 }
 
 /* For mobile devices (width up to 480px) */
@@ -295,7 +331,7 @@
     }
 
     h3 {
-        font-size: 3.5vw;
+        font-size: 3.0vw;
         width: 100%;
         text-indent: 0.1;
         margin: 0 auto;
