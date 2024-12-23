@@ -312,6 +312,7 @@ h3 span {
         box-sizing: border-box;
         padding: 0.5rem;
         line-height: 1.2;
+        letter-spacing: 0.025em;
     }
 
     h2 {
