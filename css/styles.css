@@ -313,7 +313,6 @@ h3 span {
         box-sizing: border-box;
         padding: 0.5rem;
         line-height: 1.2;
-        letter-spacing: 0.025em;
     }
 
     h2 {
@@ -328,7 +327,6 @@ h3 span {
         overflow: hidden;
         box-sizing: border-box;
         line-height: 1.2;
-        letter-spacing: 0.025em;  /* Reduced from 0.1em to 0.05em */
     }
 
     h3 {
@@ -342,16 +340,6 @@ h3 span {
         overflow: hidden;
         box-sizing: border-box;
         line-height: 1.2;
-        letter-spacing: 0.025em;  /* Reduced from 0.1em to 0.05em */
-    }
-
-    /* Update spans for mobile */
-    h2 span {
-        letter-spacing: 0.025em;  /* Match h2 mobile spacing */
-    }
-
-    h3 span {
-        letter-spacing: 0.025em;  /* Match h3 mobile spacing */
     }
 }
   
