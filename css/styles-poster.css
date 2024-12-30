@@ -1,0 +1,152 @@
+body {
+    background-image: url('../images/sp122224.jpg');  /* Specify the image path */
+    background-size: cover;  /* Makes sure the image fits without stretching */
+    background-position: center;  /* Centers the image within the body */
+    background-repeat: no-repeat;  /* Prevents the image from repeating */
+    background-attachment: fixed;  /* Fixes the background image in place when scrolling */
+    font-family: 'Space Mono', monospace;
+    background-color: black;
+    color: white;
+    padding: 0.5in;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 80%;
+    margin: 0 auto;  /* Center the poster */
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* General link styling for all h1, h2, and h3 */
+h1 a, h2 a, h3 a {
+    color: inherit;         /* Keep the original text color */
+    text-decoration: none;  /* Remove the underline from links */
+    display: inline-block;  /* Ensure the link only takes up the space of the text */
+    position: relative;
+    cursor: default;
+}
+
+h1:hover {
+    background-color: white;     /* Change background on hover */
+    color: black;           
+    text-decoration: none;       /* Ensure no underline on hover */
+}
+
+h1 {
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(2.0rem, 8.0vw, 8.0rem);
+    background-color: rgb(0, 0, 0);
+    margin: 0;  /* Negative margin to counter body padding */
+    margin-bottom: 1.5rem;
+    text-align: center;
+    position: center;
+    color: white;
+    line-height: 1.2;      /* Adjust line-height to reduce vertical space */
+}
+
+
+h2, h3 {
+    font-family: 'Space Mono', monospace;
+    background-color: black;
+    margin: 0;             /* Remove any default margins */
+    padding: 0;            /* Remove any default padding */
+    line-height: 1.2;      /* Adjust line-height to reduce vertical space */
+}
+
+
+h2 {
+    color: rgb(148, 212, 255);
+    font-size: clamp(1rem, 5vw, 5rem);
+    text-align: left;
+    width: 100%;  /* Full width */
+    margin: 0 auto;  /* Center horizontally */
+    margin-bottom: 1.25rem;
+    justify-content: left;  /* Center content */
+    align-items: center;  /* Center vertically */
+    text-indent: 0.25rem;
+    letter-spacing: 1.25rem;
+}
+
+/* Add left arrow */
+h2::before {
+    content: "//";
+    display: inline-flex;
+    justify-content: left;
+    align-items: center;
+    left: 0;
+    color: rgb(255, 80, 80);
+    text-align: center;
+    position: relative;
+    text-indent: 0.0rem;
+}
+
+h3::before {
+    content: "#";
+    display: inline-flex;
+    justify-content: left;
+    align-items: center;
+    color: rgb(255, 80, 80);
+    text-align: left;
+    text-indent: 0.0rem;
+}
+
+
+
+h3 {
+    color: rgb(158, 255, 146);
+    font-size: clamp(0.25rem, 2.0vw, 2.0rem);
+    width: 80%;  /* Full width */
+    margin: 0;
+    margin-bottom: 1.25rem; 
+    justify-content: left;  /* Center content */
+    align-items: center;  /* Center vertically */
+    text-indent: 0.25rem;
+}
+
+/* Remove the hover effect since we now have permanent arrows */
+h2:hover::before, h3:hover::before {
+  content: none;
+}
+
+
+
+/* Control spacing of animated spans */
+
+@media print {
+    body {
+        width: 11in;
+        height: 17in;
+        margin: 0;
+        padding: 0.5in;
+    }
+
+    /* Ensure background prints */
+    * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
+
+/* Control spans and spacing */
+h1 span {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.1em;  /* Spacing for h1 */
+}
+
+h2 span {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.3em;  /* Spacing for h2 */
+}
+
+h3 span {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.5em;  /* Spacing for h3 */
+}
