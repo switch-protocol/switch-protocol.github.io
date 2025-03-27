@@ -1,5 +1,5 @@
   body {
-    background-image: url('../images/sp122224.jpg');  /* Specify the image path */
+    background-image: url('../images/site_bg3.png');  /* Specify the image path */
     background-size: cover;  /* Makes sure the image fits without stretching */
     background-position: center;  /* Centers the image within the body */
     background-repeat: no-repeat;  /* Prevents the image from repeating */
@@ -38,7 +38,7 @@
 
  /* Add ">" when hovering over h2 and h3*/
  h2:hover::before, h3:hover::before {
-  content: ">";          /* The character to insert */
+  content: "_";          /* The character to insert */
   left: -0.25em;
   position: relative;     /* Position it to the left of the text */
   color: rgb(255, 80, 80);        /* Customize the color */

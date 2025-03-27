@@ -23,7 +23,7 @@ const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*[]/:_-";
 let intervals = {};
 
 // Helper function to animate text
-function animateText(target, duration = 1500, intervalTime = 35, charTurns = 5) {
+function animateText(target, duration = 1500, intervalTime = 15, charTurns = 3) {
     let iteration = 0;
     let lastIndex = -1;
 
