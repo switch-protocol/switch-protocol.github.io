@@ -1,7 +1,7 @@
   body {
     background-image: url('../images/site_bg4.png');  /* Specify the image path */
     background-size: cover;  /* Makes sure the image fits without stretching */
-    background-position: center;  /* Centers the image within the body */
+    background-position: center 0%;  /* Centers horizontally and positions 60% down vertically */
     background-repeat: no-repeat;  /* Prevents the image from repeating */
     background-attachment: fixed;  /* Fixes the background image in place when scrolling */
     font-family: 'Space Mono', monospace;
