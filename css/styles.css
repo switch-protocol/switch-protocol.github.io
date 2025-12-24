@@ -62,15 +62,16 @@
   
   h1 {
     font-family: 'Space Mono', monospace;
-    font-size: clamp(3rem, 10vw, 10rem);
+    font-size: clamp(2.5rem, 8vw, 6rem);
     background-color: rgb(0, 0, 0);
     margin: 0 -1.5rem;  /* Negative margin to counter body padding */
     margin-bottom: 0.5rem;
-    width: 90%;
+    width: 85%;
     text-align: center;
     color: white;
-    font-size: clamp(3rem, 10vw, 10rem);
     line-height: 1.1;      /* Adjust line-height to reduce vertical space */
+    white-space: nowrap;
+    overflow: hidden;
   }
   
   
@@ -244,8 +245,8 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 5vw;  /* Dynamic font size based on viewport width */
-    width: 100%;
+    font-size: 4.5vw;  /* Dynamic font size based on viewport width */
+    width: 90%;
     text-align: center;
     margin: 0 auto;
     margin-bottom: 1rem;
@@ -257,6 +258,7 @@ h1 {
     box-sizing: border-box;
     letter-spacing: 0;
     margin: 0 -1.5rem;  /* Negative margin to counter body padding */
+    white-space: nowrap;
 }
 
 h2 {
@@ -298,13 +300,15 @@ h3 {
   }
 
   h1 {
-      font-size: 6.0vw;
-      width: 100%;
+      font-size: 5.5vw;
+      width: 95%;
       margin-bottom: 0.25rem;
       line-height: 3.0rem;  /* Use line-height for vertical centering */
       background-color: black;
       min-height: 3.0rem;  /* Match the line-height */
       margin: 0;
+      white-space: nowrap;
+      overflow: hidden;
     } 
 
     h2 {
